@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Inscripciones — EcoRuta Temuco</title>
+  <link rel="stylesheet" href="starter.css">
+</head>
+<body>
+
+  <header>
+    <div class="logo">EcoRuta Temuco</div>
+    <nav>
+      <a href="#">Inicio</a>
+      <a href="#">Rutas</a>
+      <a href="#">Emprendimientos</a>
+      <a href="#">Inscripciones</a>
+    </nav>
+  </header>
+
+  <section>
+    <h1>Inscripciones</h1>
+    <p>Inscribe tu Pyme para formar parte del circuito turístico sustentable de Temuco.</p>
+  </section>
+
+  <form action="#" method="POST" enctype="multipart/form-data">
+    <main>
+
+      <!-- FILA 1 -->
+      <article>
+        <label for="nombre"><strong>Nombre de la Pyme</strong></label><br><br>
+        <input type="text" id="nombre" name="nombre_pyme" required style="width: 100%;">
+      </article>
+
+      <article>
+        <label for="direccion"><strong>Direccion de la Pyme</strong></label><br><br>
+        <input type="text" id="direccion" name="direccion_pyme" required style="width: 100%;">
+      </article>
+
+      <!-- FILA 2 (style="grid-column: 1;" fuerza el salto a la siguiente fila) -->
+      <article style="grid-column: 1;">
+        <label for="tipo"><strong>Tipo de Pyme</strong></label><br><br>
+        <input type="text" id="tipo" name="tipo_pyme" required style="width: 100%;">
+      </article>
+
+      <article>
+        <label for="descripcion"><strong>Descripcion breve de la pyme</strong></label><br><br>
+        <input type="text" id="descripcion" name="descripcion_pyme" required style="width: 100%;">
+      </article>
+
+      <!-- FILA 3 (style="grid-column: 1;" fuerza el salto a la tercera fila) -->
+      <article style="grid-column: 1;">
+        <label for="contacto"><strong>Contacto de la Pyme</strong></label><br><br>
+        <input type="text" id="contacto" name="contacto_pyme" required style="width: 100%;">
+      </article>
+
+      <article>
+        <label for="imagenes"><strong>Carga imagenes de la pyme (min 3)</strong></label><br><br>
+        <input type="file" id="imagenes" name="imagenes_pyme[]" multiple accept="image/*" required style="width: 100%;">
+      </article>
+
+      <!-- PANEL LATERAL (Ubicado únicamente en la 3ra columna de la 3ra fila) -->
+      <aside style="grid-column: 3; grid-row: 3; display: flex; flex-direction: column; justify-content: space-between;">
+        <div>
+          <input type="checkbox" id="compromiso" name="compromiso" required>
+          <label for="compromiso">Acepto las normas y el compromiso</label>
+        </div>
+
+        <button type="submit" style="background-color: #1E2761; color: white; border: none; padding: 12px; font-weight: bold; cursor: pointer; border-radius: 4px; margin-top: 15px; width: 100%;">
+          Inscribir Pyme
+        </button>
+      </aside>
+
+    </main>
+  </form>
+
+  <footer>
+    <p>&copy; 2026 EcoRuta Temuco — Todos los derechos reservados</p>
+  </footer>
+
+</body>
+</html>
