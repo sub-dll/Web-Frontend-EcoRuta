@@ -1,83 +1,77 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>  
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Wireframe Básico 1 — esqueleto</title>
-<link rel="stylesheet" href="06_starter.css">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guía de Rutas Boscosas</title>
 </head>
 <body>
 
-  <!-- 1: Cabecera principal -->
-  <!-- Al tener 3 elementos directos y justify-content: space-between, se irán a los extremos y al centro -->
-  <header>
-      <!-- Elemento Izquierdo: Icono de menú hamburguesa -->
-      <div class="menu-icon">
-          <span>≡</span>
-      </div>
+    <!-- El encabezado de la página -->
+    <header>
+        <div class="logo">
+            <!-- WAI-ARIA: El alt de la imagen ya es una forma de accesibilidad -->
+            <img src="ruta-al-logo.png" alt="Logotipo de la plataforma de rutas">
+        </div>
+        
+        <!-- WAI-ARIA: aria-label le dice al lector de pantalla qué tipo de navegación es esta -->
+        <nav aria-label="Navegación principal">
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Features</a></li>
+                <li><a href="#">Blog</a></li>
+                <li><a href="#">Pricing</a></li>
+            </ul>
+        </nav>
+        
+        <div class="user-actions">
+            <button type="button">Login</button>
+            <button type="button">Book a Demo</button>
+        </div>
+    </header>
 
-      <!-- Elemento Central: Navegación -->
-      <nav>
-          <button>Opción 1</button>
-          <button>Opción 2</button>
-          <button>Opción 3</button>
-      </nav>
-      
-      <!-- Elemento Derecho: Área de perfil y notificaciones -->
-      <div class="user-info">
-          <span class="bell">Campana</span>
-          <span class="avatar">Usuario</span>
-      </div>
-  </header>
-    
-  <!-- 3: Barra secundaria que contiene un botón solitario -->
-  <section>
-      <button>Acción principal</button>
-  </section>
+    <main>
+        <!-- WAI-ARIA: role="search" le indica explícitamente que esta es la zona de búsqueda de la página -->
+        <form class="search-form" action="#" method="get" role="search">
+            <!-- WAI-ARIA: aria-label reemplaza al texto visual para que el lector sepa qué se debe escribir aquí -->
+            <input type="search" placeholder="Search" aria-label="Buscar rutas">
+        </form>
 
-  <!-- 4: Contenido principal -->
-  <!-- starter.css convierte a <main> en un grid, por ende los <article> deben ir DIRECTAMENTE aquí adentro -->
-  <main>
-      
-      <!-- 5: tarjeta independiente (elemento 1 de la grilla) -->
-      <article>
-          <img src="https://placehold.co/320x240?text=Tarjeta+1" alt="Fondo gris">
-          <button class="card-action">Acción</button>
-      </article>
-      
-      <!-- 6: tarjeta independiente (elemento 2 de la grilla) -->
-      <article>
-          <img src="https://placehold.co/320x240?text=Tarjeta+2" alt="Fondo gris">
-          <button class="card-action">Acción</button>
-      </article>
+        <div class="card-grid">
 
-      <!-- 7: tarjeta independiente (elemento 3 de la grilla) -->
-      <article>
-          <img src="https://placehold.co/320x240?text=Tarjeta+3" alt="Fondo gris">
-          <button class="card-action">Acción</button>
-      </article>
+            <!-- Tarjeta 1 -->
+            <article class="card">
+                <!-- Es importante describir la imagen para quien no puede verla -->
+                <img src="bosque.jpg" alt="Fotografía de un bosque frondoso para la Ruta boscosa">
+                
+                <div class="card-content">
+                    <h3>Ruta boscosa</h3>
+                    
+                    <!-- Aquí usamos la lista de descripción que explicamos -->
+                    <dl class="details">
+                        <dt>Distancia</dt>
+                        <dd>15.000 metros</dd>
+                        
+                        <dt>Dificultad</dt>
+                        <dd>Baja</dd>
+                        
+                        <dt>Ubicación</dt>
+                        <dd>Temuco</dd>
+                    </dl>
+                    
+                    <!-- WAI-ARIA: Si hay 6 botones que dicen "Ver más", el usuario ciego no sabrá "Ver más de qué". 
+                         aria-label le da el contexto específico sin cambiar el texto visible. -->
+                    <button type="button" class="view-more" aria-label="Ver más detalles de la Ruta boscosa">
+                        Ver Más
+                    </button>
+                </div>
+            </article>
 
-      <!-- 8: tarjeta independiente (elemento 4 de la grilla) -->
-      <article>
-          <img src="https://placehold.co/320x240?text=Tarjeta+4" alt="Fondo gris">
-          <button class="card-action">Acción</button>
-      </article>
+            <!-- Para tu proyecto, solo debes copiar y pegar desde <article> hasta </article> 
+                 5 veces más aquí abajo, cambiando las imágenes o los textos si es necesario. -->
 
-      <!-- 9: tarjeta independiente (elemento 5 de la grilla) -->
-      <article>
-          <img src="https://placehold.co/320x240?text=Tarjeta+5" alt="Fondo gris">
-          <button class="card-action">Acción</button>
-      </article>
+        </div>
+    </main>
 
-      <!-- 10: tarjeta independiente (elemento 6 de la grilla) -->
-      <article>
-          <img src="https://placehold.co/320x240?text=Tarjeta+6" alt="Fondo gris">
-          <button class="card-action">Acción</button>
-      </article>
-
-  </main>
-
-</body>
-</html>
 </body>
 </html>
