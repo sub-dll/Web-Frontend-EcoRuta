@@ -4,17 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Guía de Rutas Boscosas</title>
+    <link rel="stylesheet" href="06_starter.css">
 </head>
 <body>
 
-    <!-- El encabezado de la página -->
     <header>
         <div class="logo">
-            <!-- WAI-ARIA: El alt de la imagen ya es una forma de accesibilidad -->
             <img src="ruta-al-logo.png" alt="Logotipo de la plataforma de rutas">
         </div>
         
-        <!-- WAI-ARIA: aria-label le dice al lector de pantalla qué tipo de navegación es esta -->
         <nav aria-label="Navegación principal">
             <ul>
                 <li><a href="#">Home</a></li>
@@ -31,47 +29,116 @@
     </header>
 
     <main>
-        <!-- WAI-ARIA: role="search" le indica explícitamente que esta es la zona de búsqueda de la página -->
+        <h1 class="visually-hidden">Explorador de Rutas y Senderos</h1>
+
         <form class="search-form" action="#" method="get" role="search">
-            <!-- WAI-ARIA: aria-label reemplaza al texto visual para que el lector sepa qué se debe escribir aquí -->
             <input type="search" placeholder="Search" aria-label="Buscar rutas">
         </form>
 
-        <div class="card-grid">
+        <ul class="card-grid">
 
             <!-- Tarjeta 1 -->
-            <article class="card">
-                <!-- Es importante describir la imagen para quien no puede verla -->
-                <img src="bosque.jpg" alt="Fotografía de un bosque frondoso para la Ruta boscosa">
-                
-                <div class="card-content">
-                    <h3>Ruta boscosa</h3>
-                    
-                    <!-- Aquí usamos la lista de descripción que explicamos -->
-                    <dl class="details">
-                        <dt>Distancia</dt>
-                        <dd>15.000 metros</dd>
-                        
-                        <dt>Dificultad</dt>
-                        <dd>Baja</dd>
-                        
-                        <dt>Ubicación</dt>
-                        <dd>Temuco</dd>
-                    </dl>
-                    
-                    <!-- WAI-ARIA: Si hay 6 botones que dicen "Ver más", el usuario ciego no sabrá "Ver más de qué". 
-                         aria-label le da el contexto específico sin cambiar el texto visible. -->
-                    <button type="button" class="view-more" aria-label="Ver más detalles de la Ruta boscosa">
-                        Ver Más
-                    </button>
-                </div>
-            </article>
+            <li>
+                <article class="card">
+                    <img src="bosque.jpg" alt="Fotografía de un bosque frondoso para la Ruta boscosa">
+                    <div class="card-content">
+                        <h2>Ruta boscosa</h2>
+                        <dl class="details">
+                            <dt>Distancia</dt><dd>15.000 metros</dd>
+                            <dt>Dificultad</dt><dd>Baja</dd>
+                            <dt>Ubicación</dt><dd>Temuco</dd>
+                        </dl>
+                        <button type="button" class="view-more" aria-label="Ver más detalles de la Ruta boscosa">Ver Más</button>
+                    </div>
+                </article>
+            </li>
 
-            <!-- Para tu proyecto, solo debes copiar y pegar desde <article> hasta </article> 
-                 5 veces más aquí abajo, cambiando las imágenes o los textos si es necesario. -->
+            <!-- Tarjeta 2 -->
+            <li>
+                <article class="card">
+                    <img src="bosque.jpg" alt="Fotografía de un bosque frondoso para la Ruta boscosa">
+                    <div class="card-content">
+                        <h2>Ruta boscosa</h2>
+                        <dl class="details">
+                            <dt>Distancia</dt><dd>15.000 metros</dd>
+                            <dt>Dificultad</dt><dd>Baja</dd>
+                            <dt>Ubicación</dt><dd>Temuco</dd>
+                        </dl>
+                        <button type="button" class="view-more" aria-label="Ver más detalles de la Ruta boscosa">Ver Más</button>
+                    </div>
+                </article>
+            </li>
 
-        </div>
+            <!-- Tarjeta 3 -->
+            <li>
+                <article class="card">
+                    <img src="bosque.jpg" alt="Fotografía de un bosque frondoso para la Ruta boscosa">
+                    <div class="card-content">
+                        <h2>Ruta boscosa</h2>
+                        <dl class="details">
+                            <dt>Distancia</dt><dd>15.000 metros</dd>
+                            <dt>Dificultad</dt><dd>Baja</dd>
+                            <dt>Ubicación</dt><dd>Temuco</dd>
+                        </dl>
+                        <button type="button" class="view-more" aria-label="Ver más detalles de la Ruta boscosa">Ver Más</button>
+                    </div>
+                </article>
+            </li>
+
+            <!-- Tarjeta 4 -->
+            <li>
+                <article class="card">
+                    <img src="bosque.jpg" alt="Fotografía de un bosque frondoso para la Ruta boscosa">
+                    <div class="card-content">
+                        <h2>Ruta boscosa</h2>
+                        <dl class="details">
+                            <dt>Distancia</dt><dd>15.000 metros</dd>
+                            <dt>Dificultad</dt><dd>Baja</dd>
+                            <dt>Ubicación</dt><dd>Temuco</dd>
+                        </dl>
+                        <button type="button" class="view-more" aria-label="Ver más detalles de la Ruta boscosa">Ver Más</button>
+                    </div>
+                </article>
+            </li>
+
+            <!-- Tarjeta 5 -->
+            <li>
+                <article class="card">
+                    <img src="bosque.jpg" alt="Fotografía de un bosque frondoso para la Ruta boscosa">
+                    <div class="card-content">
+                        <h2>Ruta boscosa</h2>
+                        <dl class="details">
+                            <dt>Distancia</dt><dd>15.000 metros</dd>
+                            <dt>Dificultad</dt><dd>Baja</dd>
+                            <dt>Ubicación</dt><dd>Temuco</dd>
+                        </dl>
+                        <button type="button" class="view-more" aria-label="Ver más detalles de la Ruta boscosa">Ver Más</button>
+                    </div>
+                </article>
+            </li>
+
+            <!-- Tarjeta 6 -->
+            <li>
+                <article class="card">
+                    <img src="bosque.jpg" alt="Fotografía de un bosque frondoso para la Ruta boscosa">
+                    <div class="card-content">
+                        <h2>Ruta boscosa</h2>
+                        <dl class="details">
+                            <dt>Distancia</dt><dd>15.000 metros</dd>
+                            <dt>Dificultad</dt><dd>Baja</dd>
+                            <dt>Ubicación</dt><dd>Temuco</dd>
+                        </dl>
+                        <button type="button" class="view-more" aria-label="Ver más detalles de la Ruta boscosa">Ver Más</button>
+                    </div>
+                </article>
+            </li>
+
+        </ul>
     </main>
+
+    <footer>
+        <p>Información de cierre del sitio.</p>
+    </footer>
 
 </body>
 </html>
