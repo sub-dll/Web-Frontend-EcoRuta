@@ -1,0 +1,356 @@
+/*
+============================================================
+   styles.css - Estilos Personalizados
+   Enfoque: Mobile-first con Flexbox y Grid
+============================================================
+*/
+
+/* 
+  1. Reset simple 
+  Declarado una sola vez sobre *, como indica la pauta.
+*/
+* {
+    box-sizing: border-box;
+}
+
+/* Resets básicos de márgenes y tipografía para el body */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    background-color: #f4f6f9; /* Fondo suave para resaltar las tarjetas */
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Limpieza de márgenes por defecto */
+h1, h2, h3, p, ul, dl, dt, dd {
+    margin: 0;
+    padding: 0;
+}
+
+ul {
+    list-style: none;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Clase de utilidad: Ocultar visualmente (Accesibilidad) */
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+}
+
+/* =========================================
+   LAYOUT MOBILE-FIRST (Pantallas angostas)
+   ========================================= */
+
+/* Header usando Flexbox */
+header {
+    display: flex;
+    flex-direction: column; /* Apilado en móvil */
+    align-items: center;
+    gap: 1rem;
+    padding: 1.5rem;
+    background-color: #ffffff;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+.logo img {
+    height: 40px;
+    width: auto;
+}
+
+nav ul {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.8rem;
+}
+
+nav a {
+    font-weight: 600;
+    color: #555;
+    transition: color 0.3s ease;
+}
+
+nav a:hover {
+    color: #0E7C7B;
+}
+
+.user-actions {
+    display: flex;
+    gap: 10px;
+    width: 100%;
+    justify-content: center;
+}
+
+button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 6px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.user-actions button:first-child {
+    background-color: transparent;
+    border: 2px solid #0E7C7B;
+    color: #0E7C7B;
+}
+
+.user-actions button:last-child {
+    background-color: #0E7C7B;
+    color: #fff;
+}
+
+/* Contenedor principal */
+main {
+    padding: 2rem 1.5rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Buscador */
+.search-form {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 2rem;
+}
+
+.search-form input {
+    width: 100%;
+    padding: 12px 16px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 1rem;
+}
+
+/* Grilla de Tarjetas usando CSS Grid */
+.card-grid {
+    display: grid;
+    grid-template-columns: 1fr; /* 1 sola columna en móviles */
+    gap: 1.5rem;
+}
+
+/* Componente Tarjeta usando Flexbox interno */
+.card {
+    display: flex;
+    flex-direction: column;
+    background-color: #ffffff;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.08);
+    height: 100%; /* Asegura que todas las tarjetas midan lo mismo */
+    transition: transform 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-4px);
+}
+
+.card img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover; /* Evita que las imágenes se deformen */
+}
+
+.card-content {
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1; /* Permite que el contenido ocupe el espacio restante */
+}
+
+.card-content h2 {
+    font-size: 1.25rem;
+    color: #1E2761;
+    margin-bottom: 1rem;
+}
+
+/* Detalles usando Grid interno para alinear <dt> y <dd> */
+.details {
+    display: grid;
+    grid-template-columns: max-content 1fr;
+    gap: 0.5rem 1rem;
+    margin-bottom: 1.5rem;
+    font-size: 0.9rem;
+}
+
+.details dt {
+    font-weight: 700;
+    color: #444;
+}
+
+.details dd {
+    color: #666;
+}
+
+.view-more {
+    margin-top: auto; /* Flexbox: empuja el botón siempre al fondo de la tarjeta */
+    background-color: #1E2761;
+    color: #ffffff;
+    width: 100%;
+}
+
+.view-more:hover {
+    background-color: #151b45;
+}
+
+/* Footer */
+footer {
+    background-color: #24283B;
+    color: #ffffff;
+    text-align: center;
+    padding: 2rem;
+    margin-top: 3rem;
+}
+
+/* =========================================
+   MEDIA QUERIES (Tablet)
+   A partir de 768px de ancho
+   ========================================= */
+@media (min-width: 768px) {
+    header {
+        flex-direction: row; /* Elementos en fila */
+        justify-content: space-between;
+    }
+
+    nav ul {
+        flex-direction: row; /* Navegación horizontal */
+        gap: 1.5rem;
+    }
+
+    .user-actions {
+        width: auto;
+    }
+    
+    .search-form {
+        max-width: 600px;
+        margin: 0 auto 2.5rem auto;
+    }
+
+    .card-grid {
+        grid-template-columns: repeat(2, 1fr); /* 2 columnas en tablet */
+    }
+}
+
+/* =========================================
+   MEDIA QUERIES (Escritorio)
+   A partir de 1024px de ancho
+   ========================================= */
+@media (min-width: 1024px) {
+    .card-grid {
+        grid-template-columns: repeat(3, 1fr); /* 3 columnas en desktop */
+        gap: 2rem;
+    }
+}
+
+/* =========================================
+   ESTILOS NUEVOS PARA LA VISTA HOME
+   ========================================= */
+
+/* Layout general de la vista Home (Mobile-First) */
+.home-layout {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.info-section {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.info-block {
+    background-color: #ffffff;
+    padding: 1.5rem;
+    border-radius: 12px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+.info-block h2 {
+    color: #0E7C7B;
+    margin-bottom: 1rem;
+    font-size: 1.4rem;
+}
+
+.info-block ul {
+    list-style-type: disc;
+    padding-left: 1.5rem;
+}
+
+.info-block li {
+    margin-bottom: 0.5rem;
+}
+
+.top-routes-section h2 {
+    font-size: 1.4rem;
+    color: #1E2761;
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+.top-routes-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+/* Reutilizando las clases .card y .card-content del index.html */
+.top-routes-grid .card h3 {
+    font-size: 1.1rem;
+    color: #1E2761;
+    margin-bottom: 0.5rem;
+}
+
+/* =========================================
+   MEDIA QUERIES ACTUALIZADOS (Home)
+   ========================================= */
+
+@media (min-width: 768px) {
+    /* Tablet: La grilla lateral de rutas muestra 2 columnas en lugar de 1 */
+    .top-routes-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (min-width: 1024px) {
+    /* Escritorio: Diseño en 2 columnas principales (Información a la izq, Rutas a la der) */
+    .home-layout {
+        flex-direction: row; /* Cambia a layout de dos columnas */
+        align-items: flex-start;
+    }
+    
+    .info-section {
+        flex: 1; /* Ocupa la mitad izquierda */
+        position: sticky; /* Opcional: mantiene la info visible al hacer scroll */
+        top: 2rem;
+    }
+    
+    .top-routes-section {
+        flex: 1; /* Ocupa la mitad derecha */
+    }
+    
+    .top-routes-grid {
+        grid-template-columns: 1fr; /* Vuelve a 1 columna para las tarjetas dentro de la barra lateral derecha */
+    }
+}
