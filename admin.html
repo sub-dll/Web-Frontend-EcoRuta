@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Panel de Gestión Administrativa — EcoRuta Temuco</title>
+  <link rel="stylesheet" href="06_starter.css">
+</head>
+<body>
+
+  <!-- Navegación principal del sitio -->
+  <header>
+    <div class="logo">EcoRuta Temuco</div>
+    <nav aria-label="Navegación principal">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="local.html">Pymes</a></li>
+        <li><a href="admin.html" class="active">Admin</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Contenedor principal de la página (Main) -->
+  <main class="pyme-container">
+
+    <!-- Encabezado del Panel -->
+    <header class="admin-header">
+      <div class="pill-title">
+        <h1>Panel de gestión administrativa</h1>
+      </div>
+    </header>
+
+    <!-- Fila de Tarjetas de Métricas / Filtros -->
+    <section class="stats-grid" aria-label="Métricas generales de rutas">
+      
+      <article class="stat-card" data-filter="all" tabindex="0" role="button" aria-label="Filtrar por todas las rutas">
+        <span class="stat-num" id="total-count">12</span>
+        <span class="stat-label">Total de rutas</span>
+      </article>
+
+      <article class="stat-card stat-open" data-filter="open" tabindex="0" role="button" aria-label="Filtrar por rutas abiertas">
+        <span class="stat-num" id="open-count">10</span>
+        <span class="stat-label">Rutas abiertas</span>
+      </article>
+
+      <article class="stat-card stat-closed" data-filter="closed" tabindex="0" role="button" aria-label="Filtrar por rutas cerradas">
+        <span class="stat-num" id="closed-count">5</span>
+        <span class="stat-label">Rutas cerradas</span>
+      </article>
+
+    </section>
+
+    <!-- Listado de Control de Rutas (Reemplaza el antiguo <main> anidado por <section>) -->
+    <section class="routes-list" aria-label="Listado de gestión de rutas">
+
+      <article class="route-card" data-status="open">
+        <h2>Ruta 1</h2>
+        <button class="pill-toggle open" type="button" aria-label="Estado actual: Abierto. Hacer clic para cambiar a cerrado">
+          <span>Abierto</span>
+          <span class="toggle-circle" aria-hidden="true"></span>
+        </button>
+      </article>
+
+      <article class="route-card" data-status="closed">
+        <h2>Ruta 2</h2>
+        <button class="pill-toggle closed" type="button" aria-label="Estado actual: Cerrado. Hacer clic para cambiar a abierto">
+          <span class="toggle-circle" aria-hidden="true"></span>
+          <span>Cerrado</span>
+        </button>
+      </article>
+
+      <article class="route-card" data-status="open">
+        <h2>Ruta 3</h2>
+        <button class="pill-toggle open" type="button" aria-label="Estado actual: Abierto. Hacer clic para cambiar a cerrado">
+          <span>Abierto</span>
+          <span class="toggle-circle" aria-hidden="true"></span>
+        </button>
+      </article>
+
+      <article class="route-card" data-status="closed">
+        <h2>Ruta 4</h2>
+        <button class="pill-toggle closed" type="button" aria-label="Estado actual: Cerrado. Hacer clic para cambiar a abierto">
+          <span class="toggle-circle" aria-hidden="true"></span>
+          <span>Cerrado</span>
+        </button>
+      </article>
+
+      <article class="route-card" data-status="open">
+        <h2>Ruta 5</h2>
+        <button class="pill-toggle open" type="button" aria-label="Estado actual: Abierto. Hacer clic para cambiar a cerrado">
+          <span>Abierto</span>
+          <span class="toggle-circle" aria-hidden="true"></span>
+        </button>
+      </article>
+
+    </section>
+
+  </main>
+
+  <!-- Pie de página general -->
+  <footer>
+    <p><small>&copy; 2026 EcoRuta Temuco — Panel Administrativo</small></p>
+  </footer>
+
+</body>
+</html>
