@@ -4,22 +4,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>EcoRuta - Rutas Autosustentables en La Araucanía</title>
-    <!-- Enlazamos el nuevo archivo CSS creado en el paso anterior -->
     <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
 
-    <!-- Mismo Header que en index.html para mantener consistencia -->
     <header>
         <div class="logo">
-            <!-- Icono o imagen simulada del logo -->
-            <img src="https://via.placeholder.com/150x50?text=EcoRuta" alt="Logotipo de EcoRuta">
+            <img src="img/imagen-ejemplo.png" alt="Vista del Parque Nacional Conguillío">
         </div>
         
         <nav aria-label="Navegación principal">
             <ul>
                 <li><a href="home.html">Home</a></li>
-                <li><a href="index.html">Explorar Rutas</a></li>
+                <li><a href="pages/rutas.html">Explorar Rutas</a></li>
                 <li><a href="#">Comunidad</a></li>
                 <li><a href="#">Contacto</a></li>
             </ul>
@@ -34,7 +31,6 @@
     <main class="home-layout">
         <h1 class="visually-hidden">Bienvenido a EcoRuta: Descubre La Araucanía de forma sustentable</h1>
 
-        <!-- Sección de Información (Lado Izquierdo en el boceto) -->
         <section class="info-section">
             <article class="info-block">
                 <h2>¿Qué es una ruta auto sustentable?</h2>
@@ -62,47 +58,49 @@
             </article>
         </section>
 
-        <!-- Sección de Mejores Rutas (Lado Derecho en el boceto) -->
         <aside class="top-routes-section">
             <h2>Mejores rutas calificadas</h2>
             
             <div class="top-routes-grid">
                 <!-- Ruta 1 -->
                 <article class="card">
-                    <img src="https://via.placeholder.com/400x200?text=Ruta+Conguillio" alt="Vista del Parque Nacional Conguillío">
+                    <img src="img/imagen-ejemplo.jpg" alt="Vista del Parque Nacional Conguillío">
                     <div class="card-content">
                         <h3>Sendero Araucarias Milenarias</h3>
                         <dl class="details">
                             <dt>Calificación</dt><dd>⭐⭐⭐⭐⭐</dd>
                             <dt>Dificultad</dt><dd>Media</dd>
                         </dl>
-                        <button type="button" class="view-more">Ver Detalles</button>
+                        <!-- Tarjeta 2 resuelta: aria-label descriptivo -->
+                        <button type="button" class="view-more" aria-label="Ver detalles del Sendero Araucarias Milenarias">Ver Detalles</button>
                     </div>
                 </article>
 
                 <!-- Ruta 2 -->
                 <article class="card">
-                    <img src="https://via.placeholder.com/400x200?text=Ruta+Villarrica" alt="Sendero cerca del volcán Villarrica">
+                    <img src="img/imagen-ejemplo.jpg" alt="Vista del Parque Nacional Conguillío">
                     <div class="card-content">
                         <h3>Cicloruta Volcánica</h3>
                         <dl class="details">
                             <dt>Calificación</dt><dd>⭐⭐⭐⭐½</dd>
                             <dt>Dificultad</dt><dd>Alta</dd>
                         </dl>
-                        <button type="button" class="view-more">Ver Detalles</button>
+                        <!-- Tarjeta 2 resuelta: aria-label descriptivo -->
+                        <button type="button" class="view-more" aria-label="Ver detalles de la Cicloruta Volcánica">Ver Detalles</button>
                     </div>
                 </article>
 
                 <!-- Ruta 3 -->
                 <article class="card">
-                    <img src="https://via.placeholder.com/400x200?text=Ruta+Budi" alt="Lago Budi y entorno natural">
+                    <img src="img/imagen-ejemplo.jpg" alt="Vista del Parque Nacional Conguillío">
                     <div class="card-content">
                         <h3>Circuito Cultural Lago Budi</h3>
                         <dl class="details">
                             <dt>Calificación</dt><dd>⭐⭐⭐⭐⭐</dd>
                             <dt>Dificultad</dt><dd>Baja</dd>
                         </dl>
-                        <button type="button" class="view-more">Ver Detalles</button>
+                        <!-- Tarjeta 2 resuelta: aria-label descriptivo -->
+                        <button type="button" class="view-more" aria-label="Ver detalles del Circuito Cultural Lago Budi">Ver Detalles</button>
                     </div>
                 </article>
             </div>
