@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ecoruta - Homepage</title>
+  
+  <!-- Enlace al archivo starter.css -->
+  <link rel="stylesheet" href="06_starter.css">
+  
+  <!-- Iconos (Lucide Icons) -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body>
+
+  <!-- Cabecera principal (starter.css le pondrá borde azul con etiqueta "header") -->
+  <header>
+    <div>
+      <p>Bienvenido a</p>
+
+      <h1>Ecoruta</h1>
+    </div>
+
+    <!-- Navegación de usuario -->
+    <nav aria-label="Navegación de usuario">
+      <a href="#perfil">Usuario</a>
+      <i data-lucide="user-circle-2" aria-hidden="true"></i>
+    </nav>
+  </header>
+
+  <!-- Contenido principal -->
+  <main>
+
+    <!-- Sección 1: Rutas -->
+    <section aria-labelledby="rutas-title">
+      <h2 id="rutas-title">Rutas</h2>
+
+      <!-- Formulario de búsqueda -->
+      <form role="search" action="/buscar-rutas" method="GET">
+        <label for="search-rutas" style="display:none;">Buscar rutas</label>
+        <input type="search" id="search-rutas" name="q" placeholder="Buscar rutas">
+        <button type="submit" aria-label="Realizar búsqueda">
+          <i data-lucide="search" aria-hidden="true"></i>
+        </button>
+      </form>
+
+      <!-- Articulos de rutas -->
+      <article>
+        <a href="#ruta-populares">
+          <figure>
+            <img src="https://placehold.co/320x220?text=Ruta+Popular" alt="Paisaje de portada">
+          </figure>
+          <p><strong>Rutas populares</strong></p>
+        </a>
+      </article>
+
+      <article>
+        <a href="#ruta-1">
+          <figure>
+            <img src="https://placehold.co/240x120?text=Imagen+Ruta+1" alt="Banner explicativo de la Ruta 1">
+          </figure>
+          <p><strong>Ruta #1</strong></p>
+        </a>
+      </article>
+
+      <article>
+        <a href="#ruta-2">
+          <figure>
+            <img src="https://placehold.co/240x120?text=Imagen+Ruta+2" alt="Banner explicativo de la Ruta 2">
+          </figure>
+          <p><strong>Ruta #2</strong></p>
+        </a>
+      </article>
+
+      <article>
+        <a href="#ruta-3">
+          <figure>
+            <img src="https://placehold.co/240x120?text=Imagen+Ruta+3" alt="Banner explicativo de la Ruta 3">
+          </figure>
+          <p><strong>Ruta #3</strong></p>
+        </a>
+      </article>
+
+      <button type="button" aria-label="Ver más rutas">
+        <i data-lucide="chevron-right" aria-hidden="true"></i>
+      </button>
+    </section>
+
+    <!-- Sección 2: Noticias y demas articulos -->
+    <section aria-labelledby="noticias-title">
+      <h2 id="noticias-title">Noticias de Ecoruta</h2>
+
+      <!-- Formulario de búsqueda -->
+      <form role="search" action="/buscar-noticias" method="GET">
+        <label for="search-noticias" style="display:none;">Buscar noticias</label>
+        <input type="search" id="search-noticias" name="q" placeholder="Buscar...">
+        <button type="submit" aria-label="Realizar búsqueda">
+          <i data-lucide="search" aria-hidden="true"></i>
+        </button>
+      </form>
+
+      <!-- Artículos de Noticias y demas -->
+      <article>
+        <a href="#noticia-1">
+          <figure>
+            <img src="https://placehold.co/240x120?text=Imagen+Noticia+1" alt="Imagen representativa de la Noticia 1">
+          </figure>
+          <p><strong>Noticia #1</strong></p>
+        </a>
+      </article>
+
+      <article>
+        <a href="#noticia-2">
+          <figure>
+            <img src="https://placehold.co/240x120?text=Imagen+Noticia+2" alt="Imagen representativa de la Noticia 2">
+          </figure>
+          <p><strong>Noticia #2</strong></p>
+        </a>
+      </article>
+
+      <article>
+        <a href="#noticia-3">
+          <figure>
+            <img src="https://placehold.co/240x120?text=Imagen+Noticia+3" alt="Imagen representativa de la Noticia 3">
+          </figure>
+          <p><strong>Noticia #3</strong></p>
+        </a>
+      </article>
+
+      <article>
+        <a href="#noticia-4">
+          <figure>
+            <img src="https://placehold.co/240x120?text=Imagen+Noticia+4" alt="Imagen representativa de la Noticia 4">
+          </figure>
+          <p><strong>Noticia #4</strong></p>
+        </a>
+      </article>
+
+      <button type="button" aria-label="Ver más noticias">
+        <i data-lucide="chevron-right" aria-hidden="true"></i>
+      </button>
+    </section>
+
+    <!-- Barra lateral solo para ocupar la 3ra columna del grid de starter.css -->
+    <aside>
+      <h2>Visita nuestras Redes Sociales!</h2>
+      <p>Entra a https://www.instagram.com/ecoruta para enterarte de noticias, promociones y demas!.</p>
+    </aside>
+
+  </main>
+
+  <script>
+    lucide.createIcons();
+  </script>
+</body>
+</html>
