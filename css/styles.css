@@ -514,6 +514,39 @@ footer {
 }
 
 /* =========================================
+   VISTA DETALLE DE RUTA (detalle-ruta.html)
+   ========================================= */
+.ruta-hero-img {
+    width: 100%;
+    height: 350px;
+    object-fit: cover;
+    border-radius: 12px;
+    margin-bottom: 1.5rem;
+    background-color: #d1d5db;
+}
+
+.ruta-title {
+    color: #1E2761;
+    font-size: 2.2rem;
+    margin-bottom: 1rem;
+}
+
+.ruta-map-container {
+    width: 100%;
+    height: 300px;
+    border-radius: 12px;
+    overflow: hidden;
+    margin-top: 2rem;
+    background-color: #d1d5db; /* Fondo por si falla Google Maps */
+}
+
+.ruta-map-container iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+/* =========================================
    MEDIA QUERIES (Pantallas Grandes)
    ========================================= */
 

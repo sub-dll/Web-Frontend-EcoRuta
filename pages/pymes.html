@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Catálogo de Emprendimientos - EcoRuta</title>
+    <!-- Mantenemos la ruta relativa para el CSS -->
+    <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body>
+
+    <header>
+        <div class="logo">
+            <img src="../img/imagen-ejemplo.png" alt="Logotipo de EcoRuta">
+        </div>
+        
+        <nav aria-label="Navegación principal">
+            <ul>
+                <li><a href="../home.html">Home</a></li>
+                <li><a href="rutas.html">Explorar Rutas</a></li>
+                <li><a href="#">Comunidad</a></li>
+                <li><a href="#">Contacto</a></li>
+            </ul>
+        </nav>
+        
+        <div class="user-actions">
+            <button type="button">Iniciar Sesión</button>
+            <button type="button">Registrarse</button>
+        </div>
+    </header>
+
+    <!-- Usamos .home-layout para reciclar la división de 2 columnas en PC -->
+    <main class="home-layout">
+        
+        <!-- COLUMNA IZQUIERDA: Panel de Filtros -->
+        <aside class="info-section" style="flex: 1;">
+            <div class="info-block">
+                <h2>Filtros</h2>
+                
+                <!-- Formulario semántico para los filtros -->
+                <form action="#" method="GET">
+                    
+                    <!-- Buscador por texto -->
+                    <div style="margin-bottom: 1.5rem;">
+                        <label for="buscar-pyme" style="font-weight: bold; display: block; margin-bottom: 0.5rem; color: #1E2761;">Buscar local</label>
+                        <input type="search" id="buscar-pyme" name="q" placeholder="Ej. Sabores Mapuche..." style="width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 6px;">
+                    </div>
+                    
+                    <!-- Filtro de Categorías con Fieldset (Excelente para Accesibilidad) -->
+                    <fieldset style="border: none; padding: 0; margin-bottom: 1.5rem;">
+                        <legend style="font-weight: bold; margin-bottom: 0.8rem; color: #1E2761;">Categoría</legend>
+                        
+                        <label style="display: block; margin-bottom: 0.5rem; cursor: pointer;">
+                            <input type="checkbox" name="categoria" value="gastronomia"> Gastronomía
+                        </label>
+                        <label style="display: block; margin-bottom: 0.5rem; cursor: pointer;">
+                            <input type="checkbox" name="categoria" value="alojamiento"> Alojamiento
+                        </label>
+                        <label style="display: block; margin-bottom: 0.5rem; cursor: pointer;">
+                            <input type="checkbox" name="categoria" value="artesania"> Artesanía y Souvenirs
+                        </label>
+                        <label style="display: block; margin-bottom: 0.5rem; cursor: pointer;">
+                            <input type="checkbox" name="categoria" value="guias"> Guías Locales
+                        </label>
+                    </fieldset>
+
+                    <!-- Filtro de Ubicación -->
+                    <fieldset style="border: none; padding: 0; margin-bottom: 1.5rem;">
+                        <legend style="font-weight: bold; margin-bottom: 0.8rem; color: #1E2761;">Ubicación</legend>
+                        
+                        <label style="display: block; margin-bottom: 0.5rem; cursor: pointer;">
+                            <input type="checkbox" name="ubicacion" value="temuco"> Temuco
+                        </label>
+                        <label style="display: block; margin-bottom: 0.5rem; cursor: pointer;">
+                            <input type="checkbox" name="ubicacion" value="villarrica"> Villarrica
+                        </label>
+                        <label style="display: block; margin-bottom: 0.5rem; cursor: pointer;">
+                            <input type="checkbox" name="ubicacion" value="pucon"> Pucón
+                        </label>
+                    </fieldset>
+
+                    <!-- Botón para aplicar -->
+                    <button type="submit" style="background-color: #0E7C7B; color: white; width: 100%;">Aplicar Filtros</button>
+                </form>
+            </div>
+        </aside>
+
+        <!-- COLUMNA DERECHA: Resultados del Catálogo -->
+        <section style="flex: 3;">
+            <h1 style="color: #1E2761; font-size: 1.8rem; margin-bottom: 1.5rem;">Emprendimientos Locales</h1>
+            
+            <!-- Reciclamos tu cuadrícula de tarjetas -->
+            <ul class="card-grid">
+                
+                <!-- Emprendimiento 1 -->
+                <li>
+                    <article class="card">
+                        <img src="../img/imagen-ejemplo.png" alt="Platos típicos del local Sabores Mapuche">
+                        <div class="card-content">
+                            <h2>Sabores Mapuche</h2>
+                            <dl class="details">
+                                <dt>Categoría</dt>
+                                <dd>Gastronomía</dd>
+                                <dt>Ubicación</dt>
+                                <dd>Temuco</dd>
+                            </dl>
+                            <button type="button" class="view-more" aria-label="Ver perfil del local Sabores Mapuche">Ver Perfil</button>
+                        </div>
+                    </article>
+                </li>
+
+                <!-- Emprendimiento 2 -->
+                <li>
+                    <article class="card">
+                        <img src="../img/imagen-ejemplo.png" alt="Fachada del Hostal Bosque Nativo">
+                        <div class="card-content">
+                            <h2>Hostal Bosque Nativo</h2>
+                            <dl class="details">
+                                <dt>Categoría</dt>
+                                <dd>Alojamiento</dd>
+                                <dt>Ubicación</dt>
+                                <dd>Villarrica</dd>
+                            </dl>
+                            <button type="button" class="view-more" aria-label="Ver perfil de Hostal Bosque Nativo">Ver Perfil</button>
+                        </div>
+                    </article>
+                </li>
+
+                <!-- Emprendimiento 3 -->
+                <li>
+                    <article class="card">
+                        <img src="../img/imagen-ejemplo.png" alt="Artesanías en madera tallada a mano">
+                        <div class="card-content">
+                            <h2>Artesanías Kutral</h2>
+                            <dl class="details">
+                                <dt>Categoría</dt>
+                                <dd>Artesanía</dd>
+                                <dt>Ubicación</dt>
+                                <dd>Pucón</dd>
+                            </dl>
+                            <button type="button" class="view-more" aria-label="Ver perfil de Artesanías Kutral">Ver Perfil</button>
+                        </div>
+                    </article>
+                </li>
+
+                <!-- Puedes duplicar más bloques <li> aquí si quieres mostrar más resultados -->
+
+            </ul>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>&copy; 2026 EcoRuta. Promoviendo el turismo responsable en La Araucanía, Chile.</p>
+    </footer>
+
+</body>
+</html>

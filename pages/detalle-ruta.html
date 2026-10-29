@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sendero Araucarias Milenarias - EcoRuta</title>
+    <!-- Ruta relativa para acceder al CSS desde la carpeta pages -->
+    <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body>
+
+    <header>
+        <div class="logo">
+            <img src="../img/EcoRuta_Logo.png" alt="Logotipo de EcoRuta">
+        </div>
+        
+        <nav aria-label="Navegación principal">
+            <ul>
+                <li><a href="../home.html">Home</a></li>
+                <li><a href="rutas.html">Explorar Rutas</a></li>
+                <li><a href="#">Comunidad</a></li>
+                <li><a href="#">Contacto</a></li>
+            </ul>
+        </nav>
+        
+        <div class="user-actions">
+            <button type="button">Iniciar Sesión</button>
+            <button type="button">Registrarse</button>
+        </div>
+    </header>
+
+    <!-- Usamos .home-layout para reciclar el diseño a dos columnas en PC -->
+    <main class="home-layout">
+        
+        <!-- Columna Izquierda: Información Principal -->
+        <section class="info-section" style="flex: 2;"> <!-- Le damos más ancho visual -->
+            <article>
+                <h1 class="ruta-title">Sendero Araucarias Milenarias</h1>
+                
+                <img class="ruta-hero-img" src="../img/imagen-ejemplo.jpg" alt="Vista panorámica del Sendero Araucarias Milenarias">
+                
+                <div class="info-block">
+                    <h2>Sobre este recorrido</h2>
+                    <p>
+                        Este sendero te adentra en el corazón del Parque Nacional Conguillío. Caminarás rodeado de 
+                        araucarias milenarias, lagunas de origen volcánico y escoriales de lava solidificada del 
+                        Volcán Llaima. Es una ruta de impacto ambiental cero, perfecta para la contemplación de la flora 
+                        nativa y el avistamiento de aves como el carpintero negro.
+                    </p>
+                    <p>
+                        <strong>Recomendación:</strong> El terreno es de origen volcánico (escorial), por lo que se exige 
+                        calzado de trekking con buena suela.
+                    </p>
+                </div>
+
+                <!-- Contenedor del Mapa (Integración con Google Maps según el cuaderno) -->
+                <div class="ruta-map-container" aria-label="Mapa interactivo de la ruta">
+                    <iframe 
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12450.457193635904!2d-71.64293813727653!3d-38.64166249110825!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x961313eebdaeeeb3%3A0xe54c1bebf80c85c2!2sParque%20Nacional%20Conguill%C3%ADo!5e0!3m2!1ses!2scl!4v1700000000000!5m2!1ses!2scl" 
+                        allowfullscreen="" 
+                        loading="lazy" 
+                        referrerpolicy="no-referrer-when-downgrade"
+                        title="Ubicación del Sendero Araucarias Milenarias en el Parque Nacional Conguillío">
+                    </iframe>
+                </div>
+            </article>
+        </section>
+
+        <!-- Columna Derecha: Panel de Datos (Reciclando clases de tarjetas) -->
+        <aside class="top-routes-section" style="flex: 1;">
+            
+            <div class="info-block">
+                <h2 style="text-align: left;">Ficha Técnica</h2>
+                
+                <!-- Reciclamos la lista <dl> que ya usabas en las tarjetas -->
+                <dl class="details" style="grid-template-columns: 1fr 1fr; margin-top: 1rem;">
+                    <dt>Ubicación</dt>
+                    <dd>P.N. Conguillío</dd>
+                    
+                    <dt>Distancia</dt>
+                    <dd>15.000 metros</dd>
+                    
+                    <dt>Dificultad</dt>
+                    <dd>Media</dd>
+                    
+                    <dt>Duración</dt>
+                    <dd>4 a 5 horas</dd>
+                    
+                    <dt>Calificación</dt>
+                    <dd>⭐⭐⭐⭐⭐</dd>
+                </dl>
+
+                <div style="display: flex; flex-direction: column; gap: 10px; margin-top: 20px;">
+                    <!-- Reciclamos los estilos de botón de tu cabecera -->
+                    <button type="button" style="background-color: #1E2761; color: white; width: 100%;">Guardar Ruta</button>
+                    <button type="button" style="background-color: transparent; border: 2px solid #0E7C7B; color: #0E7C7B; width: 100%;">Compartir</button>
+                </div>
+            </div>
+
+            <!-- Panel secundario de advertencia eco-sustentable -->
+            <div class="info-block" style="margin-top: 1.5rem; background-color: #f0fdf4; border: 1px solid #0E7C7B;">
+                <h2 style="font-size: 1.1rem; margin-bottom: 0.5rem; text-align: left;">Sello EcoRuta</h2>
+                <p style="font-size: 0.9rem; margin: 0;">No dejes rastro. Esta ruta no cuenta con basureros. Lo que ingresas al parque, debe regresar contigo.</p>
+            </div>
+
+        </aside>
+
+    </main>
+
+    <footer>
+        <p>&copy; 2026 EcoRuta. Promoviendo el turismo responsable en La Araucanía, Chile.</p>
+    </footer>
+
+</body>
+</html>

@@ -1,23 +1,64 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Inscripciones — EcoRuta Temuco</title>
-  <link rel="stylesheet" href="../css/styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inscripción de Emprendimiento - EcoRuta</title>
+    <link rel="stylesheet" href="../css/styles.css">
+    <style>
+        /* Estilos específicos para el formulario, manteniendo la estética de EcoRuta */
+        .form-section { 
+            margin-bottom: 2.5rem; 
+            padding: 1.5rem; 
+            border: 2px solid #e5e7eb; 
+            border-radius: 12px; 
+            background-color: #ffffff;
+        }
+        .form-section legend { 
+            font-size: 1.3rem; 
+            font-weight: 700; 
+            color: #1E2761; 
+            padding: 0 15px; 
+            background-color: #f4f6f9;
+            border-radius: 20px;
+        }
+        .form-group { margin-bottom: 1.5rem; }
+        .form-label { display: block; font-weight: 600; margin-bottom: 0.5rem; color: #4A4A4A; }
+        .form-control { 
+            width: 100%; 
+            padding: 12px 16px; 
+            border: 1px solid #ccc; 
+            border-radius: 8px; 
+            font-size: 1rem; 
+            font-family: inherit; 
+            background-color: #fcfcfc;
+        }
+        .form-control:focus { 
+            outline: 3px solid #0E7C7B; 
+            outline-offset: 1px; 
+            border-color: transparent; 
+            background-color: #ffffff;
+        }
+        .checkbox-group { display: flex; flex-direction: column; gap: 0.8rem; margin-top: 0.5rem; }
+        .checkbox-label { display: flex; align-items: flex-start; gap: 10px; cursor: pointer; color: #4A4A4A; line-height: 1.4; }
+        
+        @media (min-width: 768px) {
+            .form-grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; }
+        }
+    </style>
 </head>
 <body>
 
-  <header>
+    <header>
         <div class="logo">
-            <img src="img/imagen-ejemplo.png" alt="Vista del Parque Nacional Conguillío">
+            <img src="../img/imagen-ejemplo.png" alt="Logotipo de EcoRuta">
         </div>
         
         <nav aria-label="Navegación principal">
             <ul>
-                <li><a href="../index.html">Home</a></li>
+                <li><a href="../home.html">Home</a></li>
                 <li><a href="rutas.html">Explorar Rutas</a></li>
-                <li><a href="inscripcion.html">Pymes</a></li>
+                <li><a href="#">Comunidad</a></li>
                 <li><a href="#">Contacto</a></li>
             </ul>
         </nav>
@@ -28,65 +69,128 @@
         </div>
     </header>
 
-  <section>
-    <h1>Inscripciones</h1>
-    <p>Inscribe tu Pyme para formar parte del circuito turístico sustentable de Temuco.</p>
-  </section>
+    <main class="pyme-container" style="margin-top: 2rem; margin-bottom: 3rem; max-width: 900px;">
+        
+        <header class="pyme-header">
+            <div class="pill-title">
+                <h1>Formulario de Registro PYME</h1>
+            </div>
+            <p style="text-align: center; color: #4A4A4A; max-width: 700px; margin-top: 10px;">
+                Completa los datos de tu negocio. Nuestro equipo revisará la información para asegurar que cumple con los criterios de turismo sustentable de La Araucanía.
+            </p>
+        </header>
 
-  <form action="#" method="POST" enctype="multipart/form-data">
-    <main>
+        <!-- INICIO DEL FORMULARIO -->
+        <form action="admin.html" method="GET">
+            
+            <!-- SECCIÓN 1: Datos del Negocio -->
+            <fieldset class="form-section">
+                <legend>1. Información Comercial</legend>
+                
+                <div class="form-grid-2">
+                    <div class="form-group">
+                        <label for="nombre-local" class="form-label">Nombre del Emprendimiento *</label>
+                        <input type="text" id="nombre-local" name="nombre_local" class="form-control" required placeholder="Ej. Sabores Mapuche">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="rut-local" class="form-label">RUT (Empresa o Persona Natural) *</label>
+                        <input type="text" id="rut-local" name="rut_local" class="form-control" required placeholder="12.345.678-9">
+                    </div>
+                </div>
 
-      <!-- FILA 1 -->
-      <article>
-        <label for="nombre"><strong>Nombre de la Pyme</strong></label><br><br>
-        <input type="text" id="nombre" name="nombre_pyme" required style="width: 100%;">
-      </article>
+                <div class="form-group">
+                    <label for="categoria" class="form-label">Categoría Principal *</label>
+                    <select id="categoria" name="categoria" class="form-control" required>
+                        <option value="">Selecciona una opción...</option>
+                        <option value="gastronomia">Gastronomía</option>
+                        <option value="alojamiento">Alojamiento y Cabañas</option>
+                        <option value="artesania">Artesanía y Souvenirs</option>
+                        <option value="guias">Guías y Tour Operadores</option>
+                    </select>
+                </div>
 
-      <article>
-        <label for="direccion"><strong>Direccion de la Pyme</strong></label><br><br>
-        <input type="text" id="direccion" name="direccion_pyme" required style="width: 100%;">
-      </article>
+                <div class="form-group">
+                    <label for="descripcion" class="form-label">Breve descripción de tus servicios *</label>
+                    <textarea id="descripcion" name="descripcion" class="form-control" rows="3" required placeholder="Cuéntanos qué ofreces a los turistas..."></textarea>
+                </div>
+            </fieldset>
 
-      <!-- FILA 2 (style="grid-column: 1;" fuerza el salto a la siguiente fila) -->
-      <article style="grid-column: 1;">
-        <label for="tipo"><strong>Tipo de Pyme</strong></label><br><br>
-        <input type="text" id="tipo" name="tipo_pyme" required style="width: 100%;">
-      </article>
+            <!-- SECCIÓN 2: Contacto y Ubicación -->
+            <fieldset class="form-section">
+                <legend>2. Contacto y Ubicación</legend>
+                
+                <div class="form-grid-2">
+                    <div class="form-group">
+                        <label for="comuna" class="form-label">Comuna *</label>
+                        <select id="comuna" name="comuna" class="form-control" required>
+                            <option value="">Selecciona tu comuna...</option>
+                            <option value="temuco">Temuco</option>
+                            <option value="villarrica">Villarrica</option>
+                            <option value="pucon">Pucón</option>
+                            <option value="panguipulli">Panguipulli</option>
+                            <option value="otra">Otra</option>
+                        </select>
+                    </div>
 
-      <article>
-        <label for="descripcion"><strong>Descripcion breve de la pyme</strong></label><br><br>
-        <input type="text" id="descripcion" name="descripcion_pyme" required style="width: 100%;">
-      </article>
+                    <div class="form-group">
+                        <label for="direccion" class="form-label">Dirección Exacta *</label>
+                        <input type="text" id="direccion" name="direccion" class="form-control" required placeholder="Ej. Av. Caupolicán 1234">
+                    </div>
 
-      <!-- FILA 3 (style="grid-column: 1;" fuerza el salto a la tercera fila) -->
-      <article style="grid-column: 1;">
-        <label for="contacto"><strong>Contacto de la Pyme</strong></label><br><br>
-        <input type="text" id="contacto" name="contacto_pyme" required style="width: 100%;">
-      </article>
+                    <div class="form-group">
+                        <label for="email" class="form-label">Correo Electrónico *</label>
+                        <input type="email" id="email" name="email" class="form-control" required placeholder="contacto@tuempresa.cl">
+                    </div>
 
-      <article>
-        <label for="imagenes"><strong>Carga imagenes de la pyme (min 3)</strong></label><br><br>
-        <input type="file" id="imagenes" name="imagenes_pyme[]" multiple accept="image/*" required style="width: 100%;">
-      </article>
+                    <div class="form-group">
+                        <label for="telefono" class="form-label">Teléfono / WhatsApp *</label>
+                        <input type="tel" id="telefono" name="telefono" class="form-control" required placeholder="+56 9 1234 5678">
+                    </div>
+                </div>
+            </fieldset>
 
-      <!-- PANEL LATERAL (Ubicado únicamente en la 3ra columna de la 3ra fila) -->
-      <aside style="grid-column: 3; grid-row: 3; display: flex; flex-direction: column; justify-content: space-between;">
-        <div>
-          <input type="checkbox" id="compromiso" name="compromiso" required>
-          <label for="compromiso">Acepto las normas y el compromiso</label>
-        </div>
+            <!-- SECCIÓN 3: Criterios EcoRuta -->
+            <fieldset class="form-section">
+                <legend>3. Sello Sustentable EcoRuta</legend>
+                <p style="margin-bottom: 1rem; color: #4A4A4A; font-size: 0.9rem;">Selecciona las prácticas sustentables que aplicas actualmente en tu negocio:</p>
+                
+                <div class="checkbox-group">
+                    <label class="checkbox-label">
+                        <input type="checkbox" name="eco_reciclaje" value="si">
+                        <span><strong>Gestión de Residuos:</strong> Separo y reciclo la basura (vidrio, plásticos, latas) o hago compostaje.</span>
+                    </label>
+                    <label class="checkbox-label">
+                        <input type="checkbox" name="eco_local" value="si">
+                        <span><strong>Comercio Justo:</strong> Más del 50% de mis proveedores son productores locales de La Araucanía.</span>
+                    </label>
+                    <label class="checkbox-label">
+                        <input type="checkbox" name="eco_energia" value="si">
+                        <span><strong>Eficiencia:</strong> Uso iluminación LED, paneles solares o sistemas de ahorro de agua.</span>
+                    </label>
+                    <label class="checkbox-label">
+                        <input type="checkbox" name="eco_cultura" value="si">
+                        <span><strong>Identidad Cultural:</strong> Mi negocio promueve y respeta la cultura y tradiciones Mapuche.</span>
+                    </label>
+                </div>
+            </fieldset>
 
-        <button type="submit" style="background-color: #1E2761; color: white; border: none; padding: 12px; font-weight: bold; cursor: pointer; border-radius: 4px; margin-top: 15px; width: 100%;">
-          Inscribir Pyme
-        </button>
-      </aside>
+            <!-- BOTÓN DE ENVÍO -->
+            <div style="text-align: center; margin-top: 2rem;">
+                <button type="submit" style="background-color: #0E7C7B; color: white; padding: 15px 40px; font-size: 1.2rem; width: 100%; max-width: 400px;">
+                    Enviar Solicitud
+                </button>
+                <p style="margin-top: 15px; font-size: 0.85rem; color: #666;">
+                    Al enviar este formulario, aceptas nuestros Términos y Condiciones.
+                </p>
+            </div>
 
+        </form>
     </main>
-  </form>
 
-  <footer>
-    <p>&copy; 2026 EcoRuta Temuco — Todos los derechos reservados</p>
-  </footer>
+    <footer>
+        <p>&copy; 2026 EcoRuta. Promoviendo el turismo responsable en La Araucanía, Chile.</p>
+    </footer>
 
 </body>
 </html>
