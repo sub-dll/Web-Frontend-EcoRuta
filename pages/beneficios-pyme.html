@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Suma tu PYME - EcoRuta</title>
     <link rel="stylesheet" href="../css/styles.css">
 </head>
+
 <body>
 
     <!-- ENCABEZADO -->
@@ -13,25 +15,27 @@
         <div class="logo">
             <img src="../img/imagen-ejemplo.png" alt="Logotipo de EcoRuta">
         </div>
-        
+
         <nav aria-label="Navegación principal">
             <ul>
-                <li><a href="../home.html">Home</a></li>
+                <!-- Usamos ../ para volver a la raíz -->
+                <li><a href="../index.html">Home</a></li>
+                <!-- Sin ../ porque ya estamos dentro de pages -->
                 <li><a href="rutas.html">Explorar Rutas</a></li>
-                <li><a href="#">Comunidad</a></li>
-                <li><a href="#">Contacto</a></li>
+                <li><a href="pymes.html">Emprendimientos</a></li>
+                <li><a href="beneficios-pyme.html">Suma tu PYME</a></li>
             </ul>
         </nav>
-        
         <div class="user-actions">
-            <button type="button">Iniciar Sesión</button>
-            <button type="button">Registrarse</button>
+            <a href="admin.html"
+                style="padding: 10px 20px; border: 2px solid #0E7C7B; color: #0E7C7B; border-radius: 6px; font-weight: bold;">Panel
+                Admin</a>
         </div>
     </header>
 
     <!-- CONTENEDOR PRINCIPAL -->
     <main class="pyme-container" style="margin-top: 3rem; margin-bottom: 3rem;">
-        
+
         <!-- SECCIÓN HERO (Presentación Principal) -->
         <header class="pyme-header">
             <div class="pill-title">
@@ -39,7 +43,7 @@
             </div>
             <div class="pill-desc">
                 <p style="margin: 0; font-size: 1.1rem;">
-                    Conecta tu negocio local con miles de turistas responsables que recorren La Araucanía. 
+                    Conecta tu negocio local con miles de turistas responsables que recorren La Araucanía.
                     En EcoRuta impulsamos la economía circular y el turismo de bajo impacto.
                 </p>
             </div>
@@ -48,27 +52,30 @@
         <!-- SECCIÓN DE BENEFICIOS (Usando tu grilla de 3 columnas) -->
         <section style="margin-top: 4rem;">
             <h2 style="text-align: center; color: #1E2761; margin-bottom: 2rem;">¿Por qué unirte a nuestra red?</h2>
-            
+
             <div class="grid-3-col">
                 <!-- Beneficio 1 -->
                 <div class="info-block" style="text-align: center; border-top: 4px solid #0E7C7B;">
                     <span style="font-size: 3rem; display: block; margin-bottom: 10px;">🌱</span>
                     <h3 style="color: #1E2761; margin-bottom: 10px;">Mayor Visibilidad</h3>
-                    <p style="font-size: 0.95rem; color: #444;">Tu emprendimiento aparecerá directamente en los mapas y rutas recomendadas de los viajeros que pasan por tu zona.</p>
+                    <p style="font-size: 0.95rem; color: #444;">Tu emprendimiento aparecerá directamente en los mapas y
+                        rutas recomendadas de los viajeros que pasan por tu zona.</p>
                 </div>
 
                 <!-- Beneficio 2 -->
                 <div class="info-block" style="text-align: center; border-top: 4px solid #0E7C7B;">
                     <span style="font-size: 3rem; display: block; margin-bottom: 10px;">🤝</span>
                     <h3 style="color: #1E2761; margin-bottom: 10px;">Turismo Responsable</h3>
-                    <p style="font-size: 0.95rem; color: #444;">Atrae a un público que valora la autenticidad, respeta el medio ambiente y busca consumir productos locales y sustentables.</p>
+                    <p style="font-size: 0.95rem; color: #444;">Atrae a un público que valora la autenticidad, respeta
+                        el medio ambiente y busca consumir productos locales y sustentables.</p>
                 </div>
 
                 <!-- Beneficio 3 -->
                 <div class="info-block" style="text-align: center; border-top: 4px solid #0E7C7B;">
                     <span style="font-size: 3rem; display: block; margin-bottom: 10px;">📈</span>
                     <h3 style="color: #1E2761; margin-bottom: 10px;">Red de Apoyo</h3>
-                    <p style="font-size: 0.95rem; color: #444;">Forma parte de una comunidad de pymes, accede a datos sobre el flujo de visitantes y mejora tus ventas en temporada alta.</p>
+                    <p style="font-size: 0.95rem; color: #444;">Forma parte de una comunidad de pymes, accede a datos
+                        sobre el flujo de visitantes y mejora tus ventas en temporada alta.</p>
                 </div>
             </div>
         </section>
@@ -78,13 +85,16 @@
             <h2 style="color: #1E2761; margin-bottom: 1rem;">Requisitos para participar</h2>
             <ul style="list-style-type: none; padding-left: 0; display: flex; flex-direction: column; gap: 10px;">
                 <li style="display: flex; align-items: center; gap: 10px;">
-                    <span style="color: #0E7C7B; font-weight: bold;">✓</span> Estar ubicado formalmente en la Región de La Araucanía.
+                    <span style="color: #0E7C7B; font-weight: bold;">✓</span> Estar ubicado formalmente en la Región de
+                    La Araucanía.
                 </li>
                 <li style="display: flex; align-items: center; gap: 10px;">
-                    <span style="color: #0E7C7B; font-weight: bold;">✓</span> Ofrecer productos o servicios relacionados al turismo (gastronomía, alojamiento, guías, artesanía).
+                    <span style="color: #0E7C7B; font-weight: bold;">✓</span> Ofrecer productos o servicios relacionados
+                    al turismo (gastronomía, alojamiento, guías, artesanía).
                 </li>
                 <li style="display: flex; align-items: center; gap: 10px;">
-                    <span style="color: #0E7C7B; font-weight: bold;">✓</span> Contar con al menos una práctica sustentable (reciclaje, productos orgánicos, apoyo comunitario).
+                    <span style="color: #0E7C7B; font-weight: bold;">✓</span> Contar con al menos una práctica
+                    sustentable (reciclaje, productos orgánicos, apoyo comunitario).
                 </li>
             </ul>
         </section>
@@ -92,10 +102,12 @@
         <!-- LLAMADO A LA ACCIÓN (Caja oscura con botón) -->
         <section class="box-dark" style="margin-top: 3rem; text-align: center; padding: 3rem 2rem;">
             <h2 style="margin-bottom: 1rem; font-size: 1.8rem;">¿Cumples con los requisitos?</h2>
-            <p style="margin-bottom: 2rem; font-size: 1.1rem;">El registro es 100% gratuito. Completa el formulario y nuestro equipo evaluará tu solicitud para darte de alta en la plataforma.</p>
-            
+            <p style="margin-bottom: 2rem; font-size: 1.1rem;">El registro es 100% gratuito. Completa el formulario y
+                nuestro equipo evaluará tu solicitud para darte de alta en la plataforma.</p>
+
             <!-- Este botón lleva a la página de inscripción que haremos a continuación -->
-            <a href="inscripcion.html" class="btn-whatsapp" style="display: inline-block; font-size: 1.1rem; padding: 15px 30px; text-decoration: none;">
+            <a href="inscripcion.html" class="btn-whatsapp"
+                style="display: inline-block; font-size: 1.1rem; padding: 15px 30px; text-decoration: none;">
                 Completar Formulario de Inscripción
             </a>
         </section>
@@ -108,4 +120,5 @@
     </footer>
 
 </body>
+
 </html>

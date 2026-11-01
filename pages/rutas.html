@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,6 +8,7 @@
     <!-- Solución aplicada: ../ para salir de la carpeta pages -->
     <link rel="stylesheet" href="../css/styles.css">
 </head>
+
 <body>
 
     <header>
@@ -14,19 +16,21 @@
             <!-- Solución aplicada: ../ para buscar la imagen en la carpeta principal -->
             <img src="**" alt="Logotipo de la plataforma de rutas">
         </div>
-        
+
         <nav aria-label="Navegación principal">
             <ul>
+                <!-- Usamos ../ para volver a la raíz -->
                 <li><a href="../index.html">Home</a></li>
+                <!-- Sin ../ porque ya estamos dentro de pages -->
                 <li><a href="rutas.html">Explorar Rutas</a></li>
-                <li><a href="inscripcion.html">Pymes</a></li>
-                <li><a href="#">Contacto</a></li>
+                <li><a href="pymes.html">Emprendimientos</a></li>
+                <li><a href="beneficios-pyme.html">Suma tu PYME</a></li>
             </ul>
         </nav>
-        
         <div class="user-actions">
-            <button type="button">Iniciar Sesión</button>
-            <button type="button">Registrarse</button>
+            <a href="admin.html"
+                style="padding: 10px 20px; border: 2px solid #0E7C7B; color: #0E7C7B; border-radius: 6px; font-weight: bold;">Panel
+                Admin</a>
         </div>
     </header>
 
@@ -47,11 +51,14 @@
                     <div class="card-content">
                         <h2>Ruta boscosa</h2>
                         <dl class="details">
-                            <dt>Distancia</dt><dd>15.000 metros</dd>
-                            <dt>Dificultad</dt><dd>Baja</dd>
-                            <dt>Ubicación</dt><dd>Temuco</dd>
+                            <dt>Distancia</dt>
+                            <dd>15.000 metros</dd>
+                            <dt>Dificultad</dt>
+                            <dd>Baja</dd>
+                            <dt>Ubicación</dt>
+                            <dd>Temuco</dd>
                         </dl>
-                        <button type="button" class="view-more" aria-label="Ver más detalles de la Ruta boscosa">Ver Más</button>
+                        <a href="detalle-ruta.html" class="view-more" style="display: block; text-align: center; padding: 10px; border-radius: 0 0 12px 12px;" aria-label="Ver detalles de la ruta">Ver Detalles</a>
                     </div>
                 </article>
             </li>
@@ -63,11 +70,14 @@
                     <div class="card-content">
                         <h2>Ruta boscosa</h2>
                         <dl class="details">
-                            <dt>Distancia</dt><dd>15.000 metros</dd>
-                            <dt>Dificultad</dt><dd>Baja</dd>
-                            <dt>Ubicación</dt><dd>Temuco</dd>
+                            <dt>Distancia</dt>
+                            <dd>15.000 metros</dd>
+                            <dt>Dificultad</dt>
+                            <dd>Baja</dd>
+                            <dt>Ubicación</dt>
+                            <dd>Temuco</dd>
                         </dl>
-                        <button type="button" class="view-more" aria-label="Ver más detalles de la Ruta boscosa">Ver Más</button>
+                        <a href="detalle-ruta.html" class="view-more" style="display: block; text-align: center; padding: 10px; border-radius: 0 0 12px 12px;" aria-label="Ver detalles de la ruta">Ver Detalles</a>
                     </div>
                 </article>
             </li>
@@ -79,11 +89,14 @@
                     <div class="card-content">
                         <h2>Ruta boscosa</h2>
                         <dl class="details">
-                            <dt>Distancia</dt><dd>15.000 metros</dd>
-                            <dt>Dificultad</dt><dd>Baja</dd>
-                            <dt>Ubicación</dt><dd>Temuco</dd>
+                            <dt>Distancia</dt>
+                            <dd>15.000 metros</dd>
+                            <dt>Dificultad</dt>
+                            <dd>Baja</dd>
+                            <dt>Ubicación</dt>
+                            <dd>Temuco</dd>
                         </dl>
-                        <button type="button" class="view-more" aria-label="Ver más detalles de la Ruta boscosa">Ver Más</button>
+                        <a href="detalle-ruta.html" class="view-more" style="display: block; text-align: center; padding: 10px; border-radius: 0 0 12px 12px;" aria-label="Ver detalles de la ruta">Ver Detalles</a>
                     </div>
                 </article>
             </li>
@@ -95,11 +108,14 @@
                     <div class="card-content">
                         <h2>Ruta boscosa</h2>
                         <dl class="details">
-                            <dt>Distancia</dt><dd>15.000 metros</dd>
-                            <dt>Dificultad</dt><dd>Baja</dd>
-                            <dt>Ubicación</dt><dd>Temuco</dd>
+                            <dt>Distancia</dt>
+                            <dd>15.000 metros</dd>
+                            <dt>Dificultad</dt>
+                            <dd>Baja</dd>
+                            <dt>Ubicación</dt>
+                            <dd>Temuco</dd>
                         </dl>
-                        <button type="button" class="view-more" aria-label="Ver más detalles de la Ruta boscosa">Ver Más</button>
+                        <a href="detalle-ruta.html" class="view-more" style="display: block; text-align: center; padding: 10px; border-radius: 0 0 12px 12px;" aria-label="Ver detalles de la ruta">Ver Detalles</a>
                     </div>
                 </article>
             </li>
@@ -111,11 +127,14 @@
                     <div class="card-content">
                         <h2>Ruta boscosa</h2>
                         <dl class="details">
-                            <dt>Distancia</dt><dd>15.000 metros</dd>
-                            <dt>Dificultad</dt><dd>Baja</dd>
-                            <dt>Ubicación</dt><dd>Temuco</dd>
+                            <dt>Distancia</dt>
+                            <dd>15.000 metros</dd>
+                            <dt>Dificultad</dt>
+                            <dd>Baja</dd>
+                            <dt>Ubicación</dt>
+                            <dd>Temuco</dd>
                         </dl>
-                        <button type="button" class="view-more" aria-label="Ver más detalles de la Ruta boscosa">Ver Más</button>
+                        <a href="detalle-ruta.html" class="view-more" style="display: block; text-align: center; padding: 10px; border-radius: 0 0 12px 12px;" aria-label="Ver detalles de la ruta">Ver Detalles</a>
                     </div>
                 </article>
             </li>
@@ -127,11 +146,14 @@
                     <div class="card-content">
                         <h2>Ruta boscosa</h2>
                         <dl class="details">
-                            <dt>Distancia</dt><dd>15.000 metros</dd>
-                            <dt>Dificultad</dt><dd>Baja</dd>
-                            <dt>Ubicación</dt><dd>Temuco</dd>
+                            <dt>Distancia</dt>
+                            <dd>15.000 metros</dd>
+                            <dt>Dificultad</dt>
+                            <dd>Baja</dd>
+                            <dt>Ubicación</dt>
+                            <dd>Temuco</dd>
                         </dl>
-                        <button type="button" class="view-more" aria-label="Ver más detalles de la Ruta boscosa">Ver Más</button>
+                        <a href="detalle-ruta.html" class="view-more" style="display: block; text-align: center; padding: 10px; border-radius: 0 0 12px 12px;" aria-label="Ver detalles de la ruta">Ver Detalles</a>
                     </div>
                 </article>
             </li>
@@ -144,4 +166,5 @@
     </footer>
 
 </body>
+
 </html>

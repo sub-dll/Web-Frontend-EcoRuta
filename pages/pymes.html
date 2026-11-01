@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,49 +8,55 @@
     <!-- Mantenemos la ruta relativa para el CSS -->
     <link rel="stylesheet" href="../css/styles.css">
 </head>
+
 <body>
 
     <header>
         <div class="logo">
             <img src="../img/imagen-ejemplo.png" alt="Logotipo de EcoRuta">
         </div>
-        
+
         <nav aria-label="Navegación principal">
             <ul>
-                <li><a href="../home.html">Home</a></li>
+                <!-- Usamos ../ para volver a la raíz -->
+                <li><a href="../index.html">Home</a></li>
+                <!-- Sin ../ porque ya estamos dentro de pages -->
                 <li><a href="rutas.html">Explorar Rutas</a></li>
-                <li><a href="#">Comunidad</a></li>
-                <li><a href="#">Contacto</a></li>
+                <li><a href="pymes.html">Emprendimientos</a></li>
+                <li><a href="beneficios-pyme.html">Suma tu PYME</a></li>
             </ul>
         </nav>
-        
         <div class="user-actions">
-            <button type="button">Iniciar Sesión</button>
-            <button type="button">Registrarse</button>
+            <a href="admin.html"
+                style="padding: 10px 20px; border: 2px solid #0E7C7B; color: #0E7C7B; border-radius: 6px; font-weight: bold;">Panel
+                Admin</a>
         </div>
     </header>
 
     <!-- Usamos .home-layout para reciclar la división de 2 columnas en PC -->
     <main class="home-layout">
-        
+
         <!-- COLUMNA IZQUIERDA: Panel de Filtros -->
         <aside class="info-section" style="flex: 1;">
             <div class="info-block">
                 <h2>Filtros</h2>
-                
+
                 <!-- Formulario semántico para los filtros -->
                 <form action="#" method="GET">
-                    
+
                     <!-- Buscador por texto -->
                     <div style="margin-bottom: 1.5rem;">
-                        <label for="buscar-pyme" style="font-weight: bold; display: block; margin-bottom: 0.5rem; color: #1E2761;">Buscar local</label>
-                        <input type="search" id="buscar-pyme" name="q" placeholder="Ej. Sabores Mapuche..." style="width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 6px;">
+                        <label for="buscar-pyme"
+                            style="font-weight: bold; display: block; margin-bottom: 0.5rem; color: #1E2761;">Buscar
+                            local</label>
+                        <input type="search" id="buscar-pyme" name="q" placeholder="Ej. Sabores Mapuche..."
+                            style="width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 6px;">
                     </div>
-                    
+
                     <!-- Filtro de Categorías con Fieldset (Excelente para Accesibilidad) -->
                     <fieldset style="border: none; padding: 0; margin-bottom: 1.5rem;">
                         <legend style="font-weight: bold; margin-bottom: 0.8rem; color: #1E2761;">Categoría</legend>
-                        
+
                         <label style="display: block; margin-bottom: 0.5rem; cursor: pointer;">
                             <input type="checkbox" name="categoria" value="gastronomia"> Gastronomía
                         </label>
@@ -67,7 +74,7 @@
                     <!-- Filtro de Ubicación -->
                     <fieldset style="border: none; padding: 0; margin-bottom: 1.5rem;">
                         <legend style="font-weight: bold; margin-bottom: 0.8rem; color: #1E2761;">Ubicación</legend>
-                        
+
                         <label style="display: block; margin-bottom: 0.5rem; cursor: pointer;">
                             <input type="checkbox" name="ubicacion" value="temuco"> Temuco
                         </label>
@@ -80,7 +87,8 @@
                     </fieldset>
 
                     <!-- Botón para aplicar -->
-                    <button type="submit" style="background-color: #0E7C7B; color: white; width: 100%;">Aplicar Filtros</button>
+                    <button type="submit" style="background-color: #0E7C7B; color: white; width: 100%;">Aplicar
+                        Filtros</button>
                 </form>
             </div>
         </aside>
@@ -88,10 +96,10 @@
         <!-- COLUMNA DERECHA: Resultados del Catálogo -->
         <section style="flex: 3;">
             <h1 style="color: #1E2761; font-size: 1.8rem; margin-bottom: 1.5rem;">Emprendimientos Locales</h1>
-            
+
             <!-- Reciclamos tu cuadrícula de tarjetas -->
             <ul class="card-grid">
-                
+
                 <!-- Emprendimiento 1 -->
                 <li>
                     <article class="card">
@@ -104,7 +112,8 @@
                                 <dt>Ubicación</dt>
                                 <dd>Temuco</dd>
                             </dl>
-                            <button type="button" class="view-more" aria-label="Ver perfil del local Sabores Mapuche">Ver Perfil</button>
+                            <button type="button" class="view-more"
+                                aria-label="Ver perfil del local Sabores Mapuche">Ver Perfil</button>
                         </div>
                     </article>
                 </li>
@@ -121,7 +130,8 @@
                                 <dt>Ubicación</dt>
                                 <dd>Villarrica</dd>
                             </dl>
-                            <button type="button" class="view-more" aria-label="Ver perfil de Hostal Bosque Nativo">Ver Perfil</button>
+                            <button type="button" class="view-more" aria-label="Ver perfil de Hostal Bosque Nativo">Ver
+                                Perfil</button>
                         </div>
                     </article>
                 </li>
@@ -138,7 +148,8 @@
                                 <dt>Ubicación</dt>
                                 <dd>Pucón</dd>
                             </dl>
-                            <button type="button" class="view-more" aria-label="Ver perfil de Artesanías Kutral">Ver Perfil</button>
+                            <button type="button" class="view-more" aria-label="Ver perfil de Artesanías Kutral">Ver
+                                Perfil</button>
                         </div>
                     </article>
                 </li>
@@ -155,4 +166,5 @@
     </footer>
 
 </body>
+
 </html>
