@@ -7,6 +7,7 @@
     <title>Sendero Araucarias Milenarias - EcoRuta</title>
     <!-- Ruta relativa para acceder al CSS desde la carpeta pages -->
     <link rel="stylesheet" href="../css/styles.css">
+    <script src="../js/main.js" defer></script>
 </head>
 
 <body>
@@ -94,6 +95,8 @@
                     <dd>⭐⭐⭐⭐⭐</dd>
                 </dl>
 
+                
+
                 <div style="display: flex; flex-direction: column; gap: 10px; margin-top: 20px;">
                     <!-- Reciclamos los estilos de botón de tu cabecera -->
                     <button type="button" style="background-color: #1E2761; color: white; width: 100%;">Guardar
@@ -102,6 +105,20 @@
                         style="background-color: transparent; border: 2px solid #0E7C7B; color: #0E7C7B; width: 100%;">Compartir</button>
                 </div>
             </div>
+
+            <!-- Widget de Clima (Laboratorio) -->
+            <section class="clima info-block" aria-labelledby="titulo-clima" style="margin-top: 1.5rem; border: 2px solid #0E7C7B;">
+                <h3 id="titulo-clima" style="text-align: left; margin-bottom: 10px;">Clima en la ruta</h3>
+                <p id="estado" aria-live="polite">Sin datos aún.</p>
+                <ul style="list-style: none; padding: 0; margin-top: 10px; display: flex; flex-direction: column; gap: 5px;">
+                    <li>Cielo: <strong id="cielo">--</strong></li>
+                    <li>Temperatura: <strong id="temperatura">--</strong></li>
+                    <li>Viento: <strong id="viento">--</strong></li>
+                    <!-- Elemento extra para la Parte 2 (Opción B) -->
+                    <li>Aire (PM2.5): <strong id="aire">--</strong> µg/m³</li>
+                </ul>
+                <p id="aviso-clima" hidden style="margin-top: 15px; font-weight: bold; color: #d9534f;"></p>
+            </section>
 
             <!-- Panel secundario de advertencia eco-sustentable -->
             <div class="info-block" style="margin-top: 1.5rem; background-color: #f0fdf4; border: 1px solid #0E7C7B;">
