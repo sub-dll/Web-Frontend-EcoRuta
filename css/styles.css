@@ -620,3 +620,157 @@ footer {
         gap: 1.5rem;
     }
 }
+
+/* =========================================
+   EFECTO GLASSMORPHISM (Vidrio Esmerilado)
+   ========================================= */
+
+/* Aplicamos tu imagen de bosque al fondo de toda la página */
+/* 1. Fondo real de bosque para que el cristal tenga algo que reflejar */
+.bg-forest {
+    /* He puesto un enlace temporal a una foto de bosque de alta calidad. 
+       Luego cámbialo por tu '../img/bosque.jpg' cuando la tengas lista */
+    background-image: url('https://images.unsplash.com/photo-1448375240586-882707db888b?q=80&w=1920&auto=format&fit=crop'); 
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-color: #2c3e50; /* Color de respaldo */
+}
+
+/* 2. Efecto Glass mucho más cristalino y transparente */
+.glass-panel {
+    /* Bajamos la opacidad del negro de 0.4 a 0.15 para que sea casi transparente */
+    background: rgba(0, 0, 0, 0.15); 
+    
+    /* El desenfoque en 8px o 10px suele dar el mejor look "cristal" */
+    backdrop-filter: blur(10px); 
+    -webkit-backdrop-filter: blur(10px);
+    
+    /* Un borde superior e izquierdo muy sutil para dar el brillo del vidrio cortado */
+    border-top: 1px solid rgba(255, 255, 255, 0.3);
+    border-left: 1px solid rgba(255, 255, 255, 0.3);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    border-right: 1px solid rgba(255, 255, 255, 0.05);
+    
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.3);
+}
+
+/* Ajustes para el Header con forma de píldora como en tu boceto */
+.header-glass {
+    position: sticky;
+    top: 20px;
+    z-index: 1000;
+    width: 95%;
+    max-width: 1200px;
+    margin: 20px auto;
+    border-radius: 50px; /* Bordes redondeados como en tu imagen */
+    padding: 10px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Forzar que los textos dentro del vidrio sean blancos y legibles */
+.header-glass nav a,
+.glass-login-card h1,
+.glass-login-card label,
+.glass-login-card p {
+    color: #ffffff;
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.8); /* Clave para aprobar accesibilidad */
+}
+
+.header-glass nav a:hover {
+    color: #a7f3d0; /* Un verde claro para el hover sobre fondo oscuro */
+}
+
+/* Tarjeta de Login */
+.glass-login-card {
+    max-width: 450px;
+    margin: 10vh auto;
+    padding: 3rem 2rem;
+    border-radius: 20px;
+    text-align: center;
+}
+
+/* Inputs de formulario transparentes */
+.glass-input {
+    width: 100%;
+    padding: 12px 16px;
+    margin-bottom: 1.5rem;
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 8px;
+    color: #ffffff;
+    font-size: 1rem;
+}
+
+.glass-input::placeholder {
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.glass-input:focus {
+    outline: 2px solid #a7f3d0;
+    background: rgba(255, 255, 255, 0.2);
+}
+
+/* Botón de Login (Verde sólido para destacar) */
+.btn-glass-submit {
+    width: 100%;
+    padding: 14px;
+    background-color: #0E7C7B;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.btn-glass-submit:hover {
+    background-color: #0b6160;
+}
+
+/* =========================================
+   TEMA GLOBAL: BOSQUE Y CRISTAL (GLASSMORPHISM)
+   ========================================= */
+
+/* 1. Fondo de bosque para TODA la web */
+body {
+    background-image: url('../img/fondo.jpg') !important; 
+    background-size: cover !important;
+    background-position: center !important;
+    background-attachment: fixed !important;
+    background-color: #2c3e50 !important;
+}
+
+/* 2. Convertir todas tus cajas y fondos blancos a cristal */
+.card, .info-block, .pyme-container, .route-card, .stat-card, .form-section, .box-dark, header, .pill-title, .pill-desc, .pill-section-title {
+    background: rgba(0, 0, 0, 0.20) !important; /* 20% oscuro para ayudar al contraste */
+    backdrop-filter: blur(10px) !important;
+    -webkit-backdrop-filter: blur(10px) !important;
+    border: 1px solid rgba(255, 255, 255, 0.2) !important;
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.3) !important;
+}
+
+/* 3. Textos blancos con sombra para aprobar Accesibilidad (WAI-ARIA) */
+body, h1, h2, h3, p, dt, dd, .details dd, .ruta-title, .form-label, span, legend, label, li, nav a {
+    color: #ffffff !important;
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.9) !important; /* Sombra obligatoria para poder leer sobre las ramas del bosque */
+}
+
+nav a:hover {
+    color: #a7f3d0 !important;
+}
+
+/* 4. Formularios e Inputs estilo Glass */
+input, select, textarea {
+    background: rgba(255, 255, 255, 0.15) !important;
+    color: #ffffff !important;
+    border: 1px solid rgba(255, 255, 255, 0.3) !important;
+    text-shadow: none !important; /* Para que al escribir no se vea borroso */
+}
+
+input::placeholder, textarea::placeholder {
+    color: rgba(255, 255, 255, 0.7) !important;
+}

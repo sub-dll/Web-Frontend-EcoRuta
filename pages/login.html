@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Iniciar Sesión - EcoRuta</title>
+    <link rel="stylesheet" href="../css/styles.css">
+</head>
+<!-- Aplicamos la imagen de bosque al fondo de esta página -->
+<body class="bg-forest">
+
+    <!-- NAV BAR GLASSMORPHISM (Puedes copiar este header a tus otras páginas si les pones la clase bg-forest al body) -->
+    <header class="header-glass glass-panel">
+        <div class="logo">
+            <img src="../img/imagen-ejemplo.png" alt="Logotipo de EcoRuta" style="height: 35px; border-radius: 50%;">
+        </div>
+        
+        <nav aria-label="Navegación principal">
+            <ul style="flex-direction: row; gap: 1.5rem;">
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="rutas.html">Rutas</a></li>
+                <li><a href="pymes.html">Emprendimientos</a></li>
+            </ul>
+        </nav>
+        
+        <div class="user-actions" style="width: auto;">
+            <!-- Usamos un botón con fondo blanco sólido como en tu referencia -->
+            <a href="login.html" style="background-color: #ffffff; color: #1E2761; padding: 8px 20px; border-radius: 20px; font-weight: bold;">Login</a>
+        </div>
+    </header>
+
+    <!-- CONTENEDOR PRINCIPAL DEL LOGIN -->
+    <main>
+        <!-- Combinamos la tarjeta de login con el efecto vidrio -->
+        <section class="glass-login-card glass-panel" aria-labelledby="login-title">
+            <h1 id="login-title" style="font-size: 2rem; margin-bottom: 0.5rem;">Bienvenido de vuelta</h1>
+            <p style="margin-bottom: 2rem;">Inicia sesión para planificar tu próxima aventura ecológica.</p>
+
+            <form action="admin.html" method="GET">
+                <div style="text-align: left;">
+                    <label for="email" style="display: block; font-weight: 600; margin-bottom: 0.5rem;">Correo Electrónico</label>
+                    <input type="email" id="email" name="email" class="glass-input" required placeholder="tu@correo.cl" aria-required="true">
+                </div>
+
+                <div style="text-align: left;">
+                    <label for="password" style="display: block; font-weight: 600; margin-bottom: 0.5rem;">Contraseña</label>
+                    <input type="password" id="password" name="password" class="glass-input" required placeholder="••••••••" aria-required="true">
+                </div>
+
+                <button type="submit" class="btn-glass-submit">Iniciar Sesión</button>
+            </form>
+
+            <div style="margin-top: 1.5rem;">
+                <a href="#" style="font-size: 0.9rem; text-decoration: underline;">¿Olvidaste tu contraseña?</a>
+            </div>
+            <div style="margin-top: 1rem;">
+                <p style="font-size: 0.9rem;">¿No tienes cuenta? <a href="#" style="font-weight: bold; color: #a7f3d0;">Regístrate aquí</a></p>
+            </div>
+        </section>
+    </main>
+
+</body>
+</html>
