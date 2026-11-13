@@ -1,15 +1,20 @@
-// Paso 4: Importamos la imagen del logo directamente desde la carpeta assets
-import logoImg from "../assets/EcoRuta_Logo.png";
+import { NavLink } from "react-router";
+// Asegúrate de que el nombre de tu imagen sea el correcto
+import logoImg from "../assets/imagen-ejemplo.jpg"; 
 
-export default function Encabezado({ enlaces, paginaActual }) {
+export default function Encabezado() {
+  // Los enlaces ahora viven aquí adentro, como pide el laboratorio
+  const enlacesMenu = [
+    { texto: "Inicio", ruta: "/" },
+    { texto: "Rutas", ruta: "/rutas" },
+    { texto: "Emprendimientos", ruta: "/emprendimientos" }
+  ];
+
   return (
-    // Se usa className en lugar de class
     <header className="header-glass glass-panel">
       
-      {/* El profe pide que el h1 de la página vaya solo en el Encabezado */}
       <h1 style={{ margin: 0, display: "flex", alignItems: "center" }}>
         <div className="logo">
-          {/* La imagen usa la variable logoImg que importamos arriba */}
           <img 
             src={logoImg} 
             alt="Logotipo de EcoRuta" 
@@ -21,17 +26,22 @@ export default function Encabezado({ enlaces, paginaActual }) {
       <nav aria-label="Navegación principal">
         <ul style={{ display: "flex", flexDirection: "row", gap: "1.5rem", listStyle: "none", margin: 0, padding: 0 }}>
           
-          {/* Encargo A: Usamos .map para recorrer el arreglo de enlaces */}
-          {enlaces.map((enlace) => (
-            <li key={enlace}>
-              <a
-                href="#"
-                // Si el enlace coincide con la paginaActual, le ponemos la clase "activo"
-                className={enlace === paginaActual ? "activo" : ""}
-                style={{ color: "#ffffff", textDecoration: "none", fontWeight: "bold", textShadow: "1px 1px 3px rgba(0,0,0,0.8)" }}
+          {enlacesMenu.map((enlace) => (
+            <li key={enlace.ruta}>
+              {/* Reemplazamos <a> por NavLink */}
+              <NavLink
+                to={enlace.ruta}
+                end={enlace.ruta === "/"}
+                className={({ isActive }) => (isActive ? "activo" : "")}
+                style={({ isActive }) => ({
+                  color: isActive ? "#a7f3d0" : "#ffffff", // Verde si está activo, blanco si no
+                  textDecoration: "none", 
+                  fontWeight: "bold", 
+                  textShadow: "1px 1px 3px rgba(0,0,0,0.8)"
+                })}
               >
-                {enlace}
-              </a>
+                {enlace.texto}
+              </NavLink>
             </li>
           ))}
 
@@ -39,8 +49,9 @@ export default function Encabezado({ enlaces, paginaActual }) {
       </nav>
       
       <div className="user-actions" style={{ width: "auto" }}>
-        <a 
-          href="#" 
+        {/* El login también usa NavLink */}
+        <NavLink 
+          to="/login" 
           style={{ 
             backgroundColor: "#ffffff", 
             color: "#1E2761", 
@@ -51,7 +62,7 @@ export default function Encabezado({ enlaces, paginaActual }) {
           }}
         >
           Login
-        </a>
+        </NavLink>
       </div>
     </header>
   );
