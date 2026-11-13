@@ -254,3 +254,35 @@ main {
     .top-routes-section { flex: 1; }
     .top-routes-grid { display: flex; flex-direction: column; gap: 1.5rem; }
 }
+
+/* =========================================
+   ESTILOS PARA EL FILTRO (ENCARGO C)
+   ========================================= */
+.filtros {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem;
+    border-radius: 12px;
+    margin: 0 auto 2rem auto;
+    max-width: 800px;
+    flex-wrap: wrap;
+}
+
+.filtros button {
+    background-color: rgba(255,255,255,0.1);
+    border: 1px solid rgba(255,255,255,0.3);
+    color: white;
+    padding: 8px 16px;
+    font-weight: 600;
+}
+
+.filtros button:hover {
+    background-color: rgba(255,255,255,0.3);
+}
+
+.filtros button[aria-pressed="true"] {
+    background-color: #0E7C7B;
+    border-color: #0E7C7B;
+}
