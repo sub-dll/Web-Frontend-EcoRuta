@@ -1,42 +1,31 @@
+import { Routes, Route } from "react-router";
 import Encabezado from "./components/Encabezado.jsx";
-import BannerPrincipal from "./components/BannerPrincipal.jsx";
-import TarjetaRuta from "./components/TarjetaRuta.jsx";
-import ListaRutas from "./components/ListaRutas.jsx";
-import ListaEmprendimientos from "./components/RutasDestacadas.jsx";
 import PiePagina from "./components/PiePagina.jsx";
-import { rutas } from "./datos/rutas.js";
-import { emprendimientos } from "./datos/emprendimientos.js";
-import imagenPrueba from "./assets/react.svg";
-import RutasDestacadas from "./components/RutasDestacadas.jsx";
+import Inicio from "./paginas/Inicio.jsx";
+import Rutas from "./paginas/Rutas.jsx";
+import DetalleRuta from "./paginas/DetalleRuta.jsx";
+import Emprendimientos from "./paginas/Emprendimientos.jsx";
+import NoEncontrada from "./paginas/NoEncontrada.jsx";
 
 function App() {
   return (
     <>
+      {/* No modificamos las props del Encabezado todavía para evitar errores */}
       <Encabezado
         enlaces={["Inicio", "Rutas", "Contacto"]}
         paginaActual="Inicio"
       />
-
+      
       <main>
-        <BannerPrincipal
-          titulo="Rutas sostenibles de La Araucanía"
-          subtitulo="Senderos y emprendimientos cerca de Temuco"
-        />
-
-        {/* Usamos el layout de 2 columnas que ya tienes en tu CSS */}
-        <div className="home-layout" style={{ marginTop: "2rem" }}>
-
-          <section className="info-section" style={{ flex: 2 }}>
-            {/* Aquí va tu lista principal de rutas */}
-            <ListaRutas rutas={rutas} />
-          </section>
-
-          {/* Aquí inyectamos tu nuevo panel derecho pasándole las rutas */}
-          <RutasDestacadas rutas={rutas} />
-
-        </div>
+        <Routes>
+          <Route path="/" element={<Inicio />} />
+          <Route path="/rutas" element={<Rutas />} />
+          <Route path="/rutas/:id" element={<DetalleRuta />} />
+          <Route path="/emprendimientos" element={<Emprendimientos />} />
+          <Route path="*" element={<NoEncontrada />} />
+        </Routes>
       </main>
-
+      
       <PiePagina />
     </>
   );
