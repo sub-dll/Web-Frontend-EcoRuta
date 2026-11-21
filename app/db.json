@@ -47,19 +47,6 @@
   ],
   "emprendimientos": [
     {
-      "id": 1,
-      "rutaId": 1,
-      "nombre_local": "Sabores Mapuche",
-      "rut_local": "12.345.678-9",
-      "categoria": "gastronomia",
-      "descripcion": "Comida ancestral con ingredientes orgánicos de la zona.",
-      "comuna": "temuco",
-      "direccion": "Av. Caupolicán 1234",
-      "email": "contacto@sabores.cl",
-      "telefono": "+56 9 1234 5678",
-      "estado_solicitud": "aprobado"
-    },
-    {
       "id": 2,
       "rutaId": 2,
       "nombre_local": "Refugio del Bosque",
@@ -70,19 +57,6 @@
       "direccion": "Camino al Ñielol 450",
       "email": "reservas@refugiodelbosque.cl",
       "telefono": "+56 9 8765 4321",
-      "estado_solicitud": "aprobado"
-    },
-    {
-      "id": 3,
-      "rutaId": 1,
-      "nombre_local": "Artesanías Pewen",
-      "rut_local": "15.987.654-2",
-      "categoria": "artesania",
-      "descripcion": "Tejidos tradicionales a telar y tallados finos en madera nativa.",
-      "comuna": "temuco",
-      "direccion": "Arturo Prat 789",
-      "email": "ventas@pewen.cl",
-      "telefono": "+56 9 1122 3344",
       "estado_solicitud": "aprobado"
     },
     {
