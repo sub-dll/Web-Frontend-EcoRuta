@@ -1,6 +1,4 @@
 import { NavLink } from "react-router";
-// Asegúrate de que el nombre de tu imagen sea el correcto
-import logoImg from "../assets/imagen-ejemplo.jpg"; 
 
 export default function Encabezado() {
   // Los enlaces ahora viven aquí adentro, como pide el laboratorio
@@ -16,7 +14,7 @@ export default function Encabezado() {
       <h1 style={{ margin: 0, display: "flex", alignItems: "center" }}>
         <div className="logo">
           <img 
-            src={logoImg} 
+            src="./img/imagen-ejemplo.jpg" 
             alt="Logotipo de EcoRuta" 
             style={{ height: "35px", borderRadius: "50%" }} 
           />

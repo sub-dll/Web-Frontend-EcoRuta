@@ -117,3 +117,22 @@ Enlace al tablero: (https://trello.com/invite/b/6a7dd5fe175ffd5d1c4c6f34/ATTI2b2
 | `POST` | /emprendimientos | { rutaId,<br>nombre_local,<br>rut_local,<br>categoria,<br>descripcion,<br>comuna,<br>direccion, email,<br>telefono,<br>estado_solicitud<br>} | emprendimiento creado, con su id | 201 | Formulario Inscripción PYME |
 | `PATCH` | /emprendimientos/:id |{<br>estado_solicitud:<br>"aprobado" } | el emprendimiento actualizado |  200  | Panel Admin |
 | `DELETE` | /emprendimientos/:id | nada | { } (objeto vacío) | 200 | Panel Admin |
+
+## Cómo levantar la API en local
+
+El proyecto requiere ejecutar el servidor de datos (`json-server`) y la aplicación React en paralelo desde la carpeta `app`:
+
+1. Instalar las dependencias dentro de la carpeta `app`:
+   ```bash
+   cd app
+   npm install
+
+  En una primera terminal (dentro de app), levantar la API local en el puerto 3001:
+
+                                  npm run api
+
+ En una segunda terminal (dentro de app), iniciar la aplicación frontend en el puerto 5173:
+
+                                  npm run dev
+
+Nota: Si se crean o eliminan registros durante las pruebas, json-server actualiza app/db.json. Para recuperar los datos base antes de hacer commit, ejecutar git restore app/db.json desde la raíz del repositorio.
