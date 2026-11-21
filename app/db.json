@@ -1,0 +1,102 @@
+{
+  "rutas": [
+    {
+      "id": 1,
+      "nombre": "Sendero Araucarias",
+      "imagen": "./img/imagen-ejemplo.jpg",
+      "alt": "Sendero rodeado de árboles y araucarias",
+      "distanciaKm": 5,
+      "dificultad": "media",
+      "accesible": true,
+      "estado": "Activa",
+      "descripcion": "Un hermoso sendero rodeado de milenarias araucarias. Perfecto para disfrutar en familia y conectar con la naturaleza de forma tranquila."
+    },
+    {
+      "id": 2,
+      "nombre": "Ruta del Ñielol",
+      "imagen": "./img/fondo.jpg",
+      "alt": "Sendero en el Monumento Natural Cerro Ñielol",
+      "distanciaKm": 3,
+      "dificultad": "baja",
+      "accesible": true,
+      "estado": "Activa",
+      "descripcion": "Recorrido clásico por el pulmón verde de Temuco. Cuenta con miradores y una rica biodiversidad de flora y fauna local."
+    },
+    {
+      "id": 3,
+      "nombre": "Parque Conguillío",
+      "imagen": "./img/imagen-ejemplo.jpg",
+      "alt": "Bosque nativo y paisaje volcánico en Conguillío",
+      "distanciaKm": 12,
+      "dificultad": "alta",
+      "accesible": false,
+      "estado": "Activa",
+      "descripcion": "Desafiante ruta que te lleva a través de paisajes volcánicos, lagos de colores intensos y bosques densos. Requiere buena condición física."
+    },
+    {
+      "id": 4,
+      "nombre": "Volcán Villarrica",
+      "imagen": "./img/fondo.jpg",
+      "alt": "Ascenso hacia el Volcán Villarrica",
+      "distanciaKm": 8,
+      "dificultad": "alta",
+      "accesible": false,
+      "estado": "Activa",
+      "descripcion": "Ascenso técnico hacia uno de los volcanes más activos. Ofrece vistas panorámicas impresionantes de la región de La Araucanía."
+    }
+  ],
+  "emprendimientos": [
+    {
+      "id": 1,
+      "rutaId": 1,
+      "nombre_local": "Sabores Mapuche",
+      "rut_local": "12.345.678-9",
+      "categoria": "gastronomia",
+      "descripcion": "Comida ancestral con ingredientes orgánicos de la zona.",
+      "comuna": "temuco",
+      "direccion": "Av. Caupolicán 1234",
+      "email": "contacto@sabores.cl",
+      "telefono": "+56 9 1234 5678",
+      "estado_solicitud": "aprobado"
+    },
+    {
+      "id": 2,
+      "rutaId": 2,
+      "nombre_local": "Refugio del Bosque",
+      "rut_local": "76.543.210-4",
+      "categoria": "alojamiento",
+      "descripcion": "Cabañas sustentables equipadas con paneles solares.",
+      "comuna": "temuco",
+      "direccion": "Camino al Ñielol 450",
+      "email": "reservas@refugiodelbosque.cl",
+      "telefono": "+56 9 8765 4321",
+      "estado_solicitud": "aprobado"
+    },
+    {
+      "id": 3,
+      "rutaId": 1,
+      "nombre_local": "Artesanías Pewen",
+      "rut_local": "15.987.654-2",
+      "categoria": "artesania",
+      "descripcion": "Tejidos tradicionales a telar y tallados finos en madera nativa.",
+      "comuna": "temuco",
+      "direccion": "Arturo Prat 789",
+      "email": "ventas@pewen.cl",
+      "telefono": "+56 9 1122 3344",
+      "estado_solicitud": "aprobado"
+    },
+    {
+      "id": 4,
+      "rutaId": 3,
+      "nombre_local": "Ruka Pewenche",
+      "rut_local": "77.111.222-3",
+      "categoria": "gastronomia",
+      "descripcion": "Degustación de piñones y platos típicos de la cordillera.",
+      "comuna": "melipeuco",
+      "direccion": "Ruta S-61 Km 12",
+      "email": "hola@rukapewenche.cl",
+      "telefono": "+56 9 4433 2211",
+      "estado_solicitud": "pendiente"
+    }
+  ]
+}
