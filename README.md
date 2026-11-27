@@ -136,3 +136,12 @@ El proyecto requiere ejecutar el servidor de datos (`json-server`) y la aplicaci
                                   npm run dev
 
 Nota: Si se crean o eliminan registros durante las pruebas, json-server actualiza app/db.json. Para recuperar los datos base antes de hacer commit, ejecutar git restore app/db.json desde la raíz del repositorio.
+
+## API pública externa
+
+- **Nombre:** Nager.Date Public Holidays API
+- **URL base:** `https://date.nager.at/api/v3`
+- **Endpoint utilizado:** `GET /NextPublicHolidays/CL`
+- **Autenticación:** Sin autenticación (no requiere API key)
+- **Vista donde aparece:** Inicio (`app/src/paginas/Inicio.jsx` mediante `ProximosFeriados.jsx`)
+- **Para qué le sirve al usuario:** Permite visualizar los próximos feriados en Chile directamente desde la portada para planificar viajes y salidas a los senderos de La Araucanía.
