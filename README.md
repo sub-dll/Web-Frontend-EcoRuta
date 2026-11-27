@@ -145,3 +145,8 @@ Nota: Si se crean o eliminan registros durante las pruebas, json-server actualiz
 - **Autenticación:** Sin autenticación (no requiere API key)
 - **Vista donde aparece:** Inicio (`app/src/paginas/Inicio.jsx` mediante `ProximosFeriados.jsx`)
 - **Para qué le sirve al usuario:** Permite visualizar los próximos feriados en Chile directamente desde la portada para planificar viajes y salidas a los senderos de La Araucanía.
+
+## Aplicación publicada
+
+- **Sitio estático:** https://sub-dll.github.io/Web-Frontend-EcoRuta-EcoRuta/
+- **Aplicación React:** https://sub-dll.github.io/Web-Frontend-EcoRuta/aplicacion/
