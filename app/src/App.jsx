@@ -6,6 +6,7 @@ import Rutas from "./paginas/Rutas.jsx";
 import DetalleRuta from "./paginas/DetalleRuta.jsx";
 import Emprendimientos from "./paginas/Emprendimientos.jsx";
 import NoEncontrada from "./paginas/NoEncontrada.jsx";
+import AvisoPublicacion from "./components/AvisoPublicacion.jsx";
 
 function App() {
   return (
@@ -15,6 +16,8 @@ function App() {
         enlaces={["Inicio", "Rutas", "Contacto"]}
         paginaActual="Inicio"
       />
+      
+      <AvisoPublicacion />
       
       <main>
         <Routes>
