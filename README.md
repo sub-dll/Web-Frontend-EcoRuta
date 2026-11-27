@@ -1,53 +1,41 @@
-# Web-frontend-Ecoruta
+# Web-Frontend-EcoRuta
 
-## Integrantes y roles (Sprint actual)
+## Integrantes y roles (Sprint 3)
 
 | Nombre | Rol ágil |
-|Diego Fonseca|Scrum Master|
-|Kevin Martin|Product Owner|
-|Maximiliano Triviño|Developer|
-|  |  |
-|  |  |
+| :--- | :--- |
+| Diego Fonseca | Scrum Master |
+| Kevin Martin | Product Owner |
+| Maximiliano Triviño | Developer |
 
-## Descripción 
+## Descripción
 
-> Una aplicacion web frontend para la organizacion "Ecoruta Temuco", mostrando las ofertas de rutas, emprendimientos y actividades, etc.
+> Aplicación web frontend para la organización "EcoRuta Temuco", que conecta a visitantes con senderos sostenibles y emprendimientos locales de La Araucanía.
 
 ## Tecnologías utilizadas
 
 - HTML5 / CSS3
-- JavaScript / TypeScript
-- (Framework a definir)
-- (API consumida)
-
-## Cómo ejecutar el proyecto
-
-```bash
-# Instalar dependencias
-npm install
-
-# Ejecutar en modo desarrollo
-npm run dev
-```
+- JavaScript (ES6+)
+- React 19 + React Router 7
+- Vite
+- JSON Server (API local simulada)
+- Nager.Date Public Holidays API (API pública externa)
 
 ## Estado del proyecto
 
-- Sprint actual: Sprint 0 (Kickoff)
-- Última actualización: 13-08-2026
+- Sprint actual: Sprint 3 (API externa y aplicación publicada)
+- Última actualización: 26-11-2026
 
 ## Tablero Kanban
 
-Enlace al tablero: (https://trello.com/invite/b/6a7dd5fe175ffd5d1c4c6f34/ATTI2b294cc6e99c5c4a91b2083ed51c89297E64BEE8/frontier-ecoruta)
+- Enlace al tablero: [Frontier EcoRuta en Trello](https://trello.com/invite/b/6a7dd5fe175ffd5d1c4c6f34/ATTI2b294cc6e99c5c4a91b2083ed51c89297E64BEE8/frontier-ecoruta)
 
 ## Enlace de despliegue
 
-(agregar enlace una vez desplegado)
+- **Sitio estático:** [https://sub-dll.github.io/Web-Frontend-EcoRuta/](https://sub-dll.github.io/Web-Frontend-EcoRuta/)
+- **Aplicación React:** [https://sub-dll.github.io/Web-Frontend-EcoRuta/aplicacion/](https://sub-dll.github.io/Web-Frontend-EcoRuta/aplicacion/)
 
 ## Contrato API y Modelo de Datos (Sprint 3)
-
-### API Pública Externa
-- **Nombre:** Open-Meteo API
-- **Uso:** Consulta del clima actual y la calidad del aire (PM2.5) en las coordenadas de la ruta.
 
 ### Modelos de Datos
 
@@ -56,7 +44,7 @@ Enlace al tablero: (https://trello.com/invite/b/6a7dd5fe175ffd5d1c4c6f34/ATTI2b2
 | :--- | :--- | :--- | :--- |
 | `id` | number | 1 | Lo genera el servidor |
 | `nombre` | string | "Sendero Araucarias" | Obligatorio |
-| `imagen` | string | "../assets/nielol.jpg" | Obligatorio |
+| `imagen` | string | "./img/imagen-ejemplo.jpg" | Obligatorio |
 | `alt` | string | "Sendero rodeado de árboles" | Obligatorio para accesibilidad |
 | `distanciaKm` | number | 15 | Obligatorio |
 | `dificultad` | string | "media" | Valores: "baja", "media", "alta" |
@@ -68,85 +56,10 @@ Enlace al tablero: (https://trello.com/invite/b/6a7dd5fe175ffd5d1c4c6f34/ATTI2b2
 {
   "id": 1,
   "nombre": "Sendero Araucarias",
-  "imagen": "../assets/nielol.jpg",
+  "imagen": "./img/imagen-ejemplo.jpg",
   "alt": "Sendero rodeado de árboles",
   "distanciaKm": 15,
   "dificultad": "media",
   "accesible": true,
   "estado": "Activa"
 }
-
-#### Recurso 2: `emprendimientos`
-| Campo | Tipo | Ejemplo de valor | Notas (obligatorio, rango, relación) |
-| :--- | :--- | :--- | :--- |
-| `id` | number | 1 | Lo genera el servidor |
-| `rutaId` | number | 1 | Relación con la ruta cercana (opcional) |
-| `nombre_local` | string | "Sabores Mapuche" | Obligatorio |
-| `rut_local` | string | "12.345.678-9" | Obligatorio |
-| `categoria` | string | "gastronomia" | Ej: gastronomia, alojamiento, artesania |
-| `descripcion` | string | "Comida ancestral" | Obligatorio |
-| `comuna` | string | "temuco" | Obligatorio |
-| `direccion` | string | "Av. Caupolicán 1234" | Obligatorio |
-| `email` | string | "contacto@sabores.cl" | Obligatorio |
-| `telefono` | string | "+56 9 1234 5678" | Obligatorio |
-| `estado_solicitud` | string | "pendiente" | "pendiente", "aprobado", "rechazado" |
-
-**Ejemplo JSON:**
-```json
-{
-  "id": 1,
-  "rutaId": 1,
-  "nombre_local": "Sabores Mapuche",
-  "rut_local": "12.345.678-9",
-  "categoria": "gastronomia",
-  "descripcion": "Comida ancestral",
-  "comuna": "temuco",
-  "direccion": "Av. Caupolicán 1234",
-  "email": "contacto@sabores.cl",
-  "telefono": "+56 9 1234 5678",
-  "estado_solicitud": "pendiente"
-}
-
-#### Tabla del Contrato: `Endpoints`
-| Metodo | Endpoint | Envía el frontend (JSON) | Responde la API | Código | Vista o componente |
-| :--- | :--- | :--- | :--- |
-| `GET` | /rutas | nada | arreglo de rutas | 200 | Home, Explorar Rutas, Panel Admin  |
-| `GET` | /rutas/:id | nada | una ruta | 200 / 404 | Detalle de Ruta |
-| `GET` | /emprendimientos | nada | arreglo de emprendimientos | 200 | Catálogo PYMEs |
-| `GET` | /emprendimientos?estado_solicitud=pendiente | nada | emprendimientos por revisar | 200 | Panel Admin |
-| `POST` | /emprendimientos | { rutaId,<br>nombre_local,<br>rut_local,<br>categoria,<br>descripcion,<br>comuna,<br>direccion, email,<br>telefono,<br>estado_solicitud<br>} | emprendimiento creado, con su id | 201 | Formulario Inscripción PYME |
-| `PATCH` | /emprendimientos/:id |{<br>estado_solicitud:<br>"aprobado" } | el emprendimiento actualizado |  200  | Panel Admin |
-| `DELETE` | /emprendimientos/:id | nada | { } (objeto vacío) | 200 | Panel Admin |
-
-## Cómo levantar la API en local
-
-El proyecto requiere ejecutar el servidor de datos (`json-server`) y la aplicación React en paralelo desde la carpeta `app`:
-
-1. Instalar las dependencias dentro de la carpeta `app`:
-   ```bash
-   cd app
-   npm install
-
-  En una primera terminal (dentro de app), levantar la API local en el puerto 3001:
-
-                                  npm run api
-
- En una segunda terminal (dentro de app), iniciar la aplicación frontend en el puerto 5173:
-
-                                  npm run dev
-
-Nota: Si se crean o eliminan registros durante las pruebas, json-server actualiza app/db.json. Para recuperar los datos base antes de hacer commit, ejecutar git restore app/db.json desde la raíz del repositorio.
-
-## API pública externa
-
-- **Nombre:** Nager.Date Public Holidays API
-- **URL base:** `https://date.nager.at/api/v3`
-- **Endpoint utilizado:** `GET /NextPublicHolidays/CL`
-- **Autenticación:** Sin autenticación (no requiere API key)
-- **Vista donde aparece:** Inicio (`app/src/paginas/Inicio.jsx` mediante `ProximosFeriados.jsx`)
-- **Para qué le sirve al usuario:** Permite visualizar los próximos feriados en Chile directamente desde la portada para planificar viajes y salidas a los senderos de La Araucanía.
-
-## Aplicación publicada
-
-- **Sitio estático:** https://sub-dll.github.io/Web-Frontend-EcoRuta-EcoRuta/
-- **Aplicación React:** https://sub-dll.github.io/Web-Frontend-EcoRuta/aplicacion/
